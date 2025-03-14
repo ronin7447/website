@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-white text-black;
+  @apply dark:bg-stone-950 dark:text-slate-50;
+}
+
+body {
+  letter-spacing: -0.8px;
+}
+
+body .a-link {
+  @apply text-blue-700 dark:text-blue-500 underline;
+}
+
+
+.ui-nav-title {
+  @apply cursor-default select-none md:text-4xl text-3xl font-bold;
+  letter-spacing: -2.5px;
+  transform: scale(1,0.94);
+}
+.ui-nav-inline {
+  @apply inline text-lg sm:text-lg md:text-xl font-bold transition-all duration-300 ease-in-out cursor-pointer;
+}
+.ui-nav-inline.material-symbols-rounded {
+  --font-wght: 800;
+}
+.ui-nav-title-hide {
+  top: -38px;
+  @apply transition-all duration-500 ease-in-out opacity-0;
+}
+
+.ui-navbar.ui-nav-title-hide {
+  @apply pb-3;
+}
+
+
+.ui-nav-title-show {
+  top: 0;
+  @apply transition-all duration-500 ease-in-out opacity-100;
+}
+
+.ui-text-outline-title, .ui-text-outline-subtitle {
+  position: relative;
+  letter-spacing: -3.5px;
+  /* color: transparent; */
+}
+/* .ui-text-outline-title::after {
+  content: "Inspiration";
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: black;
+  -webkit-text-fill-color: transparent;
+} */
+
+.ui-home-block-icon {
+  --font-FILL:1;
+  --font-wght:900;
+}
+
+.ui-home-block {
+  @apply w-full text-white pb-12 pt-16 px-6 sm:px-8 md:px-12 mx-auto;
+}
+.ui-detail-block {
+  @apply w-full text-white  mx-auto;
+}
+.ui-detail-block-text {
+  @apply pb-16 pt-16 px-6 sm:px-8 md:px-12;
+}
