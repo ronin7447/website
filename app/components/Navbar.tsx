@@ -26,10 +26,10 @@ export default function Navbar() {
                 setLstupdt(new Date().getTime());
                 return scrollY;
             }
-            if (scrollY - prevPageY > 300) {
+            if (scrollY - prevPageY > 200) {
                 setNavtitle("ui-nav-title-hide");
                 return scrollY;
-            } else if (prevPageY - scrollY > 300) {
+            } else if (prevPageY - scrollY > 200) {
                 setNavtitle("ui-nav-title-show");
                 return scrollY;
             }

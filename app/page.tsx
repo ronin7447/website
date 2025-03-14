@@ -9,11 +9,11 @@ export default async function Home() {
 
   return (
    <div>
-     <div className="max-w-[120rem] mx-auto mb-20">
+     <div className="max-w-[120rem] mx-auto mb-10 md:mb-20">
         <div className="mx-auto min-w-full">
             <div className="relative box bg-blend-overlay mx-auto text-white bg-gray-400 min-h-[60vh] h-full max-h-screen">
                 {/* <div className="abis= z-[-10] w-full min-h-[60vh] h-full max-h-screen bg-black"></div> */}
-                <Image src="/67A02062-Enhanced-NR.jpg" sizes="1080px" alt="" fill loading="lazy" quality={100} className="object-cover top-0 right-0 w-full h-full z-0"/>
+                <Image src="/67A02062-Enhanced-NR.jpg" sizes="1080px" alt="" fill loading="eager" quality={100} className="object-cover top-0 right-0 w-full h-full z-0"/>
                 <div className="relative z-10 w-full min-h-[60vh] h-full max-h-screen flex justify-start items-center bg-[rgba(0,0,0,0.40)]">
                     <div className="w-full">
                         <div className="max-w-screen-xl mx-auto px-6">
@@ -33,8 +33,8 @@ export default async function Home() {
     </div>
 
 
-    <div className="max-w-screen-xl sm:px-6 mb-20 mx-auto">
-      <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter px-6 sm:px-0 mb-24">Learn more</h1>
+    <div className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
+      <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter px-6 sm:px-0 mb-12 md:mb-24">Learn more</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. At blanditiis accusantium qui fugiat, rem quaerat, aperiam corrupti excepturi minima, est possimus! Neque fugiat impedit dolorem soluta deserunt rem mollitia explicabo?
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis quia possimus illum numquam repellendus. Minus ab, aut eveniet, eaque reprehenderit earum aliquid ut suscipit, dolores a aperiam at dignissimos tenetur.
@@ -43,8 +43,8 @@ export default async function Home() {
        
       </p>
       </div>
-      <div className="max-w-screen-xl sm:px-6 mt-32 mb-20 mx-auto">
-      <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter px-6 sm:px-0 mb-24">Learn more</h1>
+      <div className="max-w-screen-xl sm:px-6 mt-16 md:mt-32 mb-10 md:mb-20 mx-auto">
+      <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter px-6 sm:px-0 mb-12 md:mb-24">Learn more</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. At blanditiis accusantium qui fugiat, rem quaerat, aperiam corrupti excepturi minima, est possimus! Neque fugiat impedit dolorem soluta deserunt rem mollitia explicabo?
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis quia possimus illum numquam repellendus. Minus ab, aut eveniet, eaque reprehenderit earum aliquid ut suscipit, dolores a aperiam at dignissimos tenetur.
