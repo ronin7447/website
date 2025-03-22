@@ -1,55 +1,55 @@
 'use client'
 
-import { useState, useCallback, useEffect } from "react"
+// import { useState, useCallback, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 const title = "Rōnin Robotics"
-const navitems = [
-    {
-        name: "Blog",
-        url: "/blog"
-    },
-    {
-        name: "About",
-        url: "/about"
-    },
+// const navitems = [
+//     {
+//         name: "Blog",
+//         url: "/blog"
+//     },
+//     {
+//         name: "About",
+//         url: "/about"
+//     },
 
-]
+// ]
 
 export default function Navbar() {
-    const [navtitle, setNavtitle] = useState<string>("ui-nav-title-show")
-    const [pageY, setPageY] = useState(0);
-    const [lstupdt, setLstupdt] = useState(new Date().getTime());
-    const onScroll = useCallback(() => {
-        const { scrollY } = window;
-        setPageY(prevPageY => {
-            if (prevPageY === 0) {
-                setLstupdt(new Date().getTime());
-                return scrollY;
-            }
-            if (scrollY - prevPageY > 200) {
-                setNavtitle("ui-nav-title-hide");
-                return scrollY;
-            } else if (prevPageY - scrollY > 200) {
-                setNavtitle("ui-nav-title-show");
-                return scrollY;
-            }
-            return prevPageY;
-        });
-    }, [pageY, lstupdt]);
+    // const [navtitle, setNavtitle] = useState<string>("ui-nav-title-show")
+    // const [pageY, setPageY] = useState(0);
+    // const [lstupdt, setLstupdt] = useState(new Date().getTime());
+    // const onScroll = useCallback(() => {
+    //     const { scrollY } = window;
+    //     setPageY(prevPageY => {
+    //         if (prevPageY === 0) {
+    //             setLstupdt(new Date().getTime());
+    //             return scrollY;
+    //         }
+    //         if (scrollY - prevPageY > 200) {
+    //             setNavtitle("ui-nav-title-hide");
+    //             return scrollY;
+    //         } else if (prevPageY - scrollY > 200) {
+    //             setNavtitle("ui-nav-title-show");
+    //             return scrollY;
+    //         }
+    //         return prevPageY;
+    //     });
+    // }, [pageY, lstupdt]);
 
-    useEffect(() => {
-        //add eventlistener to window
-        window.addEventListener("scroll", onScroll, { passive: true });
-        // remove event on unmount to prevent a memory leak with the cleanup
-        return () => {
-            window.removeEventListener("scroll", onScroll);
-        }
-    }, []);
+    // useEffect(() => {
+    //     //add eventlistener to window
+    //     window.addEventListener("scroll", onScroll, { passive: true });
+    //     // remove event on unmount to prevent a memory leak with the cleanup
+    //     return () => {
+    //         window.removeEventListener("scroll", onScroll);
+    //     }
+    // }, []);
 
-    useEffect(() => {
-        // console.log("PageY updated:", pageY);
-    }, [pageY]);
+    // useEffect(() => {
+    //     // console.log("PageY updated:", pageY);
+    // }, [pageY]);
 
 
     return (
