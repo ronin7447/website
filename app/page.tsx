@@ -11,9 +11,10 @@ export default async function Home() {
    <div>
      <div className="max-w-[120rem] mx-auto mb-10 md:mb-16">
         <div className="mx-auto min-w-full">
-            <div className="relative box bg-blend-overlay mx-auto text-white bg-gray-400 min-h-[60vh] h-full max-h-screen">
+            <div className="relative box bg-blend-overlay mx-auto text-white bg-gray-400 min-h-[60vh] h-full max-h-screen" >
                 {/* <div className="abis= z-[-10] w-full min-h-[60vh] h-full max-h-screen bg-black"></div> */}
                 <Image src="/67A02062-Enhanced-NR.jpg" sizes="546px" alt="" quality={75} className="object-cover top-0 right-0 w-full h-auto z-0"
+                style={{ aspectRatio: "2/3", minHeight: "60vh", maxHeight: "100vh" }}
                   placeholder="blur"
                   priority
                   layout="fill"
