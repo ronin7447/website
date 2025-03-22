@@ -24,7 +24,7 @@ export default async function Home() {
                             <p className="mt-4 text-lg sm:text-xl">High School Robotics Team from Portola High School, Irvine, CA.</p>
                         </div>
                         <div className="absolute bottom-1 right-2 select-none opacity-25 text-sm">
-                        <p>&copy; Cameron Smith</p>
+                        <p>&copy; Jun Yu</p>
 
                         </div>
                     </div>
