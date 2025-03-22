@@ -57,7 +57,7 @@ export default function Navbar() {
         <div className={"bg-white dark:bg-stone-950 pt-4 sm:px-8 px-6 ui-navbar pb-5"}>
             <div className="max-w-screen-xl mx-auto">
                 <div className={"ui-nav-title flex items-center"}>
-                    <Image src="/7447logo.png" alt="Rōnin Robotics Logo" width={48} height={48} className="ui-nav-logo mt-[-6px] ml-[-24px]" quality={50}/>
+                    <Image src="/7447logo.png" alt="Rōnin Robotics Logo" width={48} height={48} className="ui-nav-logo mt-[-6px] ml-[-24px]" quality={50} loading="eager"/>
                     <Link href="/"><h1 translate="no">{title}</h1></Link>
                     {/* d  */}
                     
