@@ -2,6 +2,7 @@
 
 import { useState, useCallback, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 const title = "Rōnin Robotics"
 const navitems = [
     {
@@ -52,20 +53,23 @@ export default function Navbar() {
 
 
     return (
-        <>
-        <div className={"bg-white dark:bg-stone-950 pt-4 sm:px-8 px-6 ui-navbar"}>
+        // <>
+        <div className={"bg-white dark:bg-stone-950 pt-4 sm:px-8 px-6 ui-navbar pb-5"}>
             <div className="max-w-screen-xl mx-auto">
-                <div className={"ui-nav-title"}>
+                <div className={"ui-nav-title flex items-center"}>
+                    <Image src="/7447logo.png" alt="Rōnin Robotics Logo" width={48} height={48} className="ui-nav-logo mt-[-6px] ml-[-24px]"/>
                     <Link href="/"><h1 translate="no">{title}</h1></Link>
                     {/* d  */}
+                    
                 </div>
             </div>
 
         </div>
-        <div className={"sm:pt-4 pt-3 flex justify-between sticky top-0 left-0 w-full z-50 ui-navbar sm:px-8 px-6 pb-4 bg-white dark:bg-stone-950 " + " " + navtitle}>
+    )
+        {/* <div className={"sm:pt-4 pt-3 flex justify-between sticky top-0 left-0 w-full z-50 ui-navbar sm:px-8 px-6 pb-4 bg-white dark:bg-stone-950 " + " " + navtitle}>
             
             <div className="max-w-screen-xl w-full xl:px-0 mx-auto">
-            <ul className="">
+            <ul className="pl-[24px]">
                 <li className="ui-nav-inline"><Link href={navitems[0].url}>{navitems[0].name}</Link></li>
                 {(navitems.map((item, index) => {
                     if (index === 0) return;
@@ -74,14 +78,6 @@ export default function Navbar() {
             </ul>
             </div>
 
-            {/* <ul className="">
-                <Link href="/search">
-                    <li className="ui-nav-inline material-symbols-rounded hover:[--font-FILL:1] hover:[--font-wght:900]">
-                        Search
-                    </li>
-                </Link>
-            </ul> */}
         </div>
-    </>
-    )
+    </> */}
 }

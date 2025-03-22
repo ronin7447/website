@@ -9,7 +9,7 @@ export default async function Home() {
 
   return (
    <div>
-     <div className="max-w-[120rem] mx-auto mb-10 md:mb-20">
+     <div className="max-w-[120rem] mx-auto mb-10 md:mb-16">
         <div className="mx-auto min-w-full">
             <div className="relative box bg-blend-overlay mx-auto text-white bg-gray-400 min-h-[60vh] h-full max-h-screen">
                 {/* <div className="abis= z-[-10] w-full min-h-[60vh] h-full max-h-screen bg-black"></div> */}
@@ -34,23 +34,16 @@ export default async function Home() {
 
 
     <div className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
-      <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter px-6 sm:px-0 mb-12 md:mb-24">Learn more</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. At blanditiis accusantium qui fugiat, rem quaerat, aperiam corrupti excepturi minima, est possimus! Neque fugiat impedit dolorem soluta deserunt rem mollitia explicabo?
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis quia possimus illum numquam repellendus. Minus ab, aut eveniet, eaque reprehenderit earum aliquid ut suscipit, dolores a aperiam at dignissimos tenetur.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis animi voluptate, magnam vero laboriosam quidem unde quam alias corporis deleniti porro nostrum minima molestiae consequuntur, placeat ea consequatur magni obcaecati.
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae minus quae placeat ea aliquid dolor reiciendis perspiciatis voluptatem praesentium accusamus tempora cum natus ducimus magni possimus aut est, iusto ullam?
+      <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter px-6 sm:px-0 mb-8 md:mb-12">About Us</h1>
+      <p className="text-xl px-6">
+      Our team consists of 30+ members that participate in FIRST® Robotics Competitions along with thousands of teams and students worldwide. Our team strives to provide real-world engineering experiences through competitive robotics. Our team values a sense of community and teamwork while implementing various innovative techniques to challenge young minds. We hope to empower students with the skills they need to pursue their passion in STEM and become leaders of innovation.
        
       </p>
       </div>
-      <div className="max-w-screen-xl sm:px-6 mt-16 md:mt-32 mb-10 md:mb-20 mx-auto">
-      <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter px-6 sm:px-0 mb-12 md:mb-24">Learn more</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. At blanditiis accusantium qui fugiat, rem quaerat, aperiam corrupti excepturi minima, est possimus! Neque fugiat impedit dolorem soluta deserunt rem mollitia explicabo?
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis quia possimus illum numquam repellendus. Minus ab, aut eveniet, eaque reprehenderit earum aliquid ut suscipit, dolores a aperiam at dignissimos tenetur.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis animi voluptate, magnam vero laboriosam quidem unde quam alias corporis deleniti porro nostrum minima molestiae consequuntur, placeat ea consequatur magni obcaecati.
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae minus quae placeat ea aliquid dolor reiciendis perspiciatis voluptatem praesentium accusamus tempora cum natus ducimus magni possimus aut est, iusto ullam?
-       
+      <div className="max-w-screen-xl sm:px-6 mt-16 mb-10 md:mb-20 mx-auto">
+      <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter px-6 sm:px-0 mb-8 md:mb-12">Contact us</h1>
+      <p className="text-xl px-6">
+        Email: first.robotics.portola@gmail.com
       </p>
       </div>
     
