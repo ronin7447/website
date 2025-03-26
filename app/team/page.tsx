@@ -23,7 +23,7 @@ export default async function Home() {
                 <div className="relative z-10 w-full min-h-[60vh] h-full max-h-screen flex justify-start items-center bg-[rgba(0,0,0,0.40)]">
                     <div className="w-full">
                         <div className="max-w-screen-xl mx-auto px-6">
-                            <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter">Rōnin Robotics <span className="whitespace-nowrap">Team 7447</span></h1>
+                            <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter">About <span className="whitespace-nowrap">Our Team</span></h1>
                             <p className="mt-4 text-lg sm:text-xl">High School Robotics Team from Portola High School, Irvine, CA.</p>
                         </div>
                         <div className="absolute bottom-1 right-2 select-none opacity-25 text-sm">

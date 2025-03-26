@@ -1,60 +1,64 @@
 'use client'
 
-// import { useState, useCallback, useEffect } from "react"
+import { useState, useCallback, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 const title = "Rōnin Robotics"
-// const navitems = [
-//     {
-//         name: "Blog",
-//         url: "/blog"
-//     },
-//     {
-//         name: "About",
-//         url: "/about"
-//     },
+const navitems = [
+    {
+        name: "Team",
+        url: "/team"
+    },
+    {
+        name: "Sponsors",
+        url: "/sponsors"
+    },
+    {
+        name: "About",
+        url: "/about"
+    },
 
-// ]
+]
 
 export default function Navbar() {
-    // const [navtitle, setNavtitle] = useState<string>("ui-nav-title-show")
-    // const [pageY, setPageY] = useState(0);
-    // const [lstupdt, setLstupdt] = useState(new Date().getTime());
-    // const onScroll = useCallback(() => {
-    //     const { scrollY } = window;
-    //     setPageY(prevPageY => {
-    //         if (prevPageY === 0) {
-    //             setLstupdt(new Date().getTime());
-    //             return scrollY;
-    //         }
-    //         if (scrollY - prevPageY > 200) {
-    //             setNavtitle("ui-nav-title-hide");
-    //             return scrollY;
-    //         } else if (prevPageY - scrollY > 200) {
-    //             setNavtitle("ui-nav-title-show");
-    //             return scrollY;
-    //         }
-    //         return prevPageY;
-    //     });
-    // }, [pageY, lstupdt]);
+    const [navtitle, setNavtitle] = useState<string>("ui-nav-title-show")
+    const [pageY, setPageY] = useState(0);
+    const [lstupdt, setLstupdt] = useState(new Date().getTime());
+    const onScroll = useCallback(() => {
+        const { scrollY } = window;
+        setPageY(prevPageY => {
+            if (prevPageY === 0) {
+                setLstupdt(new Date().getTime());
+                return scrollY;
+            }
+            if (scrollY - prevPageY > 200) {
+                setNavtitle("ui-nav-title-hide");
+                return scrollY;
+            } else if (prevPageY - scrollY > 200) {
+                setNavtitle("ui-nav-title-show");
+                return scrollY;
+            }
+            return prevPageY;
+        });
+    }, [pageY, lstupdt]);
 
-    // useEffect(() => {
-    //     //add eventlistener to window
-    //     window.addEventListener("scroll", onScroll, { passive: true });
-    //     // remove event on unmount to prevent a memory leak with the cleanup
-    //     return () => {
-    //         window.removeEventListener("scroll", onScroll);
-    //     }
-    // }, []);
+    useEffect(() => {
+        //add eventlistener to window
+        window.addEventListener("scroll", onScroll, { passive: true });
+        // remove event on unmount to prevent a memory leak with the cleanup
+        return () => {
+            window.removeEventListener("scroll", onScroll);
+        }
+    }, []);
 
-    // useEffect(() => {
-    //     // console.log("PageY updated:", pageY);
-    // }, [pageY]);
+    useEffect(() => {
+        // console.log("PageY updated:", pageY);
+    }, [pageY]);
 
 
     return (
-        // <>
-        <div className={"bg-white dark:bg-stone-950 pt-4 sm:px-8 px-6 ui-navbar pb-5"}>
+        <>
+        <div className={"bg-white dark:bg-stone-950 pt-4 sm:px-8 px-6 ui-navbar"}>
             <div className="max-w-screen-xl mx-auto">
                 <div className={"ui-nav-title flex items-center"}>
                     <Image src="/7447logo.png" alt="Rōnin Robotics Logo" width={48} height={48} className="ui-nav-logo mt-[-6px] ml-[-24px]" quality={50} priority/>
@@ -65,8 +69,7 @@ export default function Navbar() {
             </div>
 
         </div>
-    )
-        {/* <div className={"sm:pt-4 pt-3 flex justify-between sticky top-0 left-0 w-full z-50 ui-navbar sm:px-8 px-6 pb-4 bg-white dark:bg-stone-950 " + " " + navtitle}>
+     <div className={"sm:pt-4 pt-3 flex justify-between sticky top-0 left-0 w-full z-50 ui-navbar sm:px-8 px-6 pb-4 bg-white dark:bg-stone-950 " + " " + navtitle}>
             
             <div className="max-w-screen-xl w-full xl:px-0 mx-auto">
             <ul className="pl-[24px]">
@@ -79,5 +82,6 @@ export default function Navbar() {
             </div>
 
         </div>
-    </> */}
+    </> 
+    )
 }
