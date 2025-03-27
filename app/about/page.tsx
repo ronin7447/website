@@ -50,7 +50,7 @@ export default function Home() {
         <br/><br/>The page is under construction.
       </p>
       <CardNavigator />
-      <div className="flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scroll-pl-16 h-[600px] pl-2 pr-2 sm:pl-0 sm:pr-0 ui-intro-cards">
+      <div className="flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scroll-pl-8 sm:scroll-pl-16 h-[600px] pl-2 pr-2 sm:pl-0 sm:pr-0 ui-intro-cards">
         <div className="ui-intro-card">
             <h2 className="text-3xl font-semibold tracking-tighter">Swerve Drive</h2>
             <div className="w-full bg-gray-300 dark:bg-gray-800 h-[300px] rounded-xl mt-6"></div>
