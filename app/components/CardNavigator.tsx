@@ -8,6 +8,8 @@ export default function CardNavigator() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const cardsContainerRef = useRef<HTMLDivElement | null>(null);
   const cardsRef = useRef<HTMLElement[]>([]);
+  const isScrollingRef = useRef<boolean>(false);
+  const scrollTimerRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     // Get the cards container
@@ -24,9 +26,8 @@ export default function CardNavigator() {
 
     // Function to determine which card is currently in view
     const handleScroll = (): void => {
-      if (!cardsContainer) return;
+      if (!cardsContainer || isScrollingRef.current) return;
       
-    //   const scrollPosition = cardsContainer.scrollLeft;
       const containerRect = cardsContainer.getBoundingClientRect();
       
       // Find which card is most visible in the viewport
@@ -56,9 +57,35 @@ export default function CardNavigator() {
     // Add scroll event listener
     cardsContainer.addEventListener("scroll", handleScroll);
 
-    // Clean up event listener
+    // Add scroll end detection
+    const handleScrollEnd = () => {
+      if (isScrollingRef.current) {
+        isScrollingRef.current = false;
+        handleScroll(); // Re-check which card is visible after scrolling ends
+      }
+    };
+
+    cardsContainer.addEventListener("scrollend", handleScrollEnd);
+    
+    // Fallback for browsers without scrollend support
+    const scrollListener = () => {
+      if (scrollTimerRef.current !== undefined) {
+        window.clearTimeout(scrollTimerRef.current);
+      }
+      scrollTimerRef.current = window.setTimeout(handleScrollEnd, 150);
+    };
+    
+    cardsContainer.addEventListener("scroll", scrollListener);
+
+    // Clean up event listeners
     return () => {
       cardsContainer.removeEventListener("scroll", handleScroll);
+      cardsContainer.removeEventListener("scroll", scrollListener);
+      cardsContainer.removeEventListener("scrollend", handleScrollEnd);
+      
+      if (scrollTimerRef.current !== undefined) {
+        window.clearTimeout(scrollTimerRef.current);
+      }
     };
   }, []);
 
@@ -66,12 +93,15 @@ export default function CardNavigator() {
   const scrollToCard = (index: number): void => {
     if (!cardsContainerRef.current || !cardsRef.current[index]) return;
     
+    // Mark that we're starting programmatic scrolling
+    isScrollingRef.current = true;
+    setCurrentCard(index); // Update current card immediately for UI feedback
+    
     // Get the target card's left position relative to the container
     const card = cardsRef.current[index];
     const container = cardsContainerRef.current;
     
     // Calculate the scroll position needed to show this card
-    // This accounts for any margins, padding, or gaps between cards
     const cardOffsetLeft = card.offsetLeft - container.offsetLeft;
     
     // Scroll to the card
@@ -95,25 +125,29 @@ export default function CardNavigator() {
         <button
           onClick={() => navigateCards(-1)}
           disabled={currentCard === 0 || isLoading}
-          className={`text-3xl font-bold cursor-pointer disabled:opacity-50 ${
+          className={`font-bold cursor-pointer disabled:opacity-50 ${
             isLoading ? "invisible" : "visible"
           }`}
           aria-label="Previous card"
           aria-hidden={isLoading}
         >
-          ←
+          <svg className="fill-black dark:fill-white" width="24" height="28" viewBox="0 0 188 185" xmlns="http://www.w3.org/2000/svg">
+            <path d="M91.9091 184.182L0.272728 92.5455L91.9091 0.909088L113 21.8182L57.6364 77.1818H187.364V107.909H57.6364L113 163.182L91.9091 184.182Z" />
+          </svg>
         </button>
         
         <button
           onClick={() => navigateCards(1)}
           disabled={currentCard === totalCards - 1 || isLoading}
-          className={`font-bold text-3xl cursor-pointer disabled:opacity-50 ${
+          className={`font-bold cursor-pointer disabled:opacity-50 ${
             isLoading ? "invisible" : "visible"
           }`}
           aria-label="Next card"
           aria-hidden={isLoading}
         >
-          →
+          <svg className="fill-black dark:fill-white" height="24" viewBox="0 0 188 185" width="28" xmlns="http://www.w3.org/2000/svg">
+            <path d="m95.4546 184.182-21.091-20.909 55.3634-55.364h-129.727v-30.7272h129.727l-55.3634-55.2727 21.091-21.000012 91.6364 91.636412z" />
+          </svg>
         </button>
       </div>
     </div>
