@@ -42,7 +42,7 @@ export default function Home() {
     </div>
 
 
-    <div className="max-w-screen-xl sm:px-6 mt-16 mb-8 md:mb-18 mx-auto ui-content">
+    <div className="max-w-screen-xl sm:px-6 mt-16 mb-18 md:mb-18 mx-auto ui-content">
       <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 md:mb-12">Our robot for 2025 season</h1>
       <p className="text-xl px-6 sm:px-0 mb-8 md:mb-12">
         Learn more about our robot for the 2025 season <Link href="https://www.firstinspires.org/robotics/frc/game-and-season">REEFSCAPE<sup>SM</sup> presented by Haas</Link>: <b>Taketsune</b>.
@@ -70,7 +70,7 @@ export default function Home() {
         <div className="mt-8 mb-16 max-w-screen-sm mx-auto">
           <div className="border-t border-stone-200 dark:border-stone-800"></div>
         </div>
-    <div className="max-w-screen-xl sm:px-6 mb-12 md:mb-24 mx-auto">
+    <div className="max-w-screen-xl sm:px-6 mb-24 mx-auto">
       <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 md:mb-12">Our team members</h1>
       <p className="text-xl px-6 sm:px-0">
         We are divided into different subteams to contribute to our robot.

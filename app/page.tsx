@@ -46,7 +46,7 @@ export default async function Home() {
        
       </p>
       </div>
-      <div className="max-w-screen-xl sm:px-6 mt-16 mb-10 md:mb-20 mx-auto">
+      <div className="max-w-screen-xl sm:px-6 mt-16 mb-24 mx-auto">
       <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 md:mb-12">Contact us</h1>
       <p className="text-xl px-6 sm:px-0">
         Email: first.robotics.portola@gmail.com
