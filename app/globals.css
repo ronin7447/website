@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@plugin 'tailwind-scrollbar';
 body {
   @apply bg-white text-black;
   @apply dark:bg-stone-950 dark:text-slate-50;
@@ -76,4 +76,18 @@ body .a-link {
 
 .ui-content a.a-link {
   @apply text-stone-600 dark:text-stone-200 underline;
+}
+
+html {
+  @apply scrollbar-thin scrollbar-thumb-stone-200 scrollbar-track-white;
+  @apply dark:scrollbar-thumb-stone-800 dark:scrollbar-track-stone-950;
+}
+
+.ui-intro-cards {
+  @apply scrollbar scrollbar-thumb-stone-200 scrollbar-track-white;
+  @apply dark:scrollbar-thumb-stone-700 dark:scrollbar-track-stone-950;
+}
+
+.ui-intro-cards .ui-intro-card {
+  @apply w-[350px] sm:w-[420px] h-[570px] flex-shrink-0 bg-gray-100 snap-center m-2 ml-0 rounded-3xl p-6 dark:bg-stone-900;
 }
