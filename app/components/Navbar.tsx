@@ -6,13 +6,13 @@ import Image from "next/image"
 const title = "Rōnin Robotics"
 const navitems = [
     {
-        name: "Team",
-        url: "/team"
+        name: "Robot",
+        url: "/robot"
     },
-    {
-        name: "Sponsors",
-        url: "/sponsors"
-    },
+    // {
+    //     name: "Sponsors",
+    //     url: "/sponsors"
+    // },
     {
         name: "About",
         url: "/about"

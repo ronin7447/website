@@ -40,14 +40,14 @@ export default async function Home() {
 
 
     <div className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
-      <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter px-6 sm:px-0 mb-8 md:mb-12">About Us</h1>
+      <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 md:mb-12">About us</h1>
       <p className="text-xl px-6 sm:px-0">
       Our team consists of 30+ members that participate in FIRST® Robotics Competitions along with thousands of teams and students worldwide. Our team strives to provide real-world engineering experiences through competitive robotics. Our team values a sense of community and teamwork while implementing various innovative techniques to challenge young minds. We hope to empower students with the skills they need to pursue their passion in STEM and become leaders of innovation.
        
       </p>
       </div>
       <div className="max-w-screen-xl sm:px-6 mt-16 mb-10 md:mb-20 mx-auto">
-      <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter px-6 sm:px-0 mb-8 md:mb-12">Contact us</h1>
+      <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 md:mb-12">Contact us</h1>
       <p className="text-xl px-6 sm:px-0">
         Email: first.robotics.portola@gmail.com
       </p>

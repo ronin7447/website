@@ -69,3 +69,7 @@ body .a-link {
 .ui-detail-block-text {
   @apply pb-16 pt-16 px-6 sm:px-8 md:px-12;
 }
+
+.ui-content a {
+  @apply text-blue-600 dark:text-blue-500 underline;
+}
