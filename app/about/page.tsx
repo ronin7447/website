@@ -67,6 +67,9 @@ export default function Home() {
         
       </div>
 
+        <div className="mt-8 mb-16 max-w-screen-sm mx-auto">
+          <div className="border-t border-stone-200 dark:border-stone-800"></div>
+        </div>
     <div className="max-w-screen-xl sm:px-6 mb-12 md:mb-24 mx-auto">
       <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 md:mb-12">Our team members</h1>
       <p className="text-xl px-6 sm:px-0">
