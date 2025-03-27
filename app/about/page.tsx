@@ -45,7 +45,7 @@ export default function Home() {
     <div className="max-w-screen-xl sm:px-6 mt-16 mb-18 md:mb-18 mx-auto ui-content">
       <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 md:mb-12">Our robot for 2025 season</h1>
       <p className="text-xl px-6 sm:px-0 mb-8 md:mb-12">
-        Learn more about our robot for the 2025 season <Link href="https://www.firstinspires.org/robotics/frc/game-and-season">REEFSCAPE<sup>SM</sup> presented by Haas</Link>: <b>Taketsune</b>.
+        Learn more about our robot for the 2025 season <Link className="a-link" href="https://www.firstinspires.org/robotics/frc/game-and-season">REEFSCAPE<sup>SM</sup> presented by Haas</Link>: Taketsune.
         <br/><br/>The page is under construction.
       </p>
 
