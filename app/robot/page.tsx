@@ -1,6 +1,7 @@
 import Image from "next/image";
 // import Link from "next/link";
 import bannerImg from "@/public/67A02359.jpg"
+import BotIntroCard from "../components/BotIntroCard";
 
 
 export default function Home() {
@@ -40,6 +41,8 @@ export default function Home() {
             
         </div>
     </div>
+
+    <BotIntroCard />
 
 
     {/* <div className="max-w-screen-xl sm:px-6 mt-16 mb-8 md:mb-18 mx-auto ui-content">
