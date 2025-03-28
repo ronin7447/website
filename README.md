@@ -50,4 +50,4 @@ yarn build
 
 Thanks to [Netlify](https://www.netlify.com) to provide the deployment environment for our website.
 
-![image](https://github.com/user-attachments/assets/31b83d7e-6d7f-484e-8423-236617c0c811)
+<img src="https://github.com/user-attachments/assets/31b83d7e-6d7f-484e-8423-236617c0c811" width="320px" style="text-align: center;" />
