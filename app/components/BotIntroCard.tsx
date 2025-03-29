@@ -6,7 +6,8 @@ import Image from "next/image";
 export default function BotIntroCard() {
     return (
         <div className="max-w-screen-xl sm:px-6 mt-16 mb-18 md:mb-18 mx-auto ui-content">
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 md:mb-12">Our robot for 2025 season</h1>
+        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 opacity-80 text-blue-600 dark:text-blue-400">&apos;25 REEFSCAPE</h1>
+        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 ">Our Robot for the 2025 Season.</h1>
         <p className="text-xl px-6 sm:px-0 mb-8">
           Learn more about our robot for the 2025 season <Link className="a-link" href="https://www.firstinspires.org/robotics/frc/game-and-season">REEFSCAPE<sup>SM</sup> presented by Haas</Link>: Taketsune.
           <br/><br/>The page is under construction.
@@ -36,7 +37,7 @@ export default function BotIntroCard() {
           <div className="ui-intro-card">
               <h2 className="text-3xl font-semibold tracking-tighter">More highlights of <span className="whitespace-nowrap">Taketsune</span></h2>
               <div className="w-full bg-gray-300 dark:bg-gray-800 h-[263px] rounded-xl mt-6"></div>
-              <p className="mt-6 text-lg"><Link className="a-link" href="/robot">Learn more information and highlights about our new robot for the 2025 season.</Link></p>
+              <p className="mt-6 text-lg"><Link className="a-link" href="/robot/reefscape">Learn more information and highlights about our new robot for the 2025 season.</Link></p>
           </div>
       </div>
      
