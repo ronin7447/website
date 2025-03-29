@@ -17,7 +17,7 @@ const cards = [
         description: `This year, we are introducing our new swerve drive subsystem, an omnidirectional drive-train in which all wheels are independently steered and driven.
         This allows our robot to spin on a spot, drive sideways (strafing), diagonally, or at other angles that aren't possible with differential drive trains.
         `,
-        details: `Powered by 4 CAN Spark MAX Brushless drive motors and 4 CAN Spark MAX Brushless steering motors, our swerve drive system is capable of reaching a maximum speed of 14.5 ft/s.
+        details: `Powered by 4 NEO Brushless drive motors and 4 NEO Brushless steering motors, our swerve drive system is capable of reaching a maximum speed of 14.5 ft/s.
         In addition, our team fine-tuned the PIDF values of the drive motors to ensure that the robot can drive straight and turn smoothly.`,
     },
     {
