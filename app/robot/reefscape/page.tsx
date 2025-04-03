@@ -2,13 +2,17 @@ import Image from "next/image";
 // import Link from "next/link";
 import bannerImg from "@/public/67A02062-Enhanced-NR.jpg"
 import type { Metadata } from "next";
-
+import limelightImg from "@/public/reefscape/limelight.png"
+import swerveImg from "@/public/reefscape/swerve.jpg"
+import elevatorImg from "@/public/reefscape/elevator.jpg"
+import shooterImg from "@/public/reefscape/shooter.jpg"
+import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "Our Robot for the 2025 Season - Rōnin Robotics",
     description: "Learn about our robot engineered for the 2025 season, equipped with a high-performance Swerve Drive, reliable Level 3 Elevator, accurate Coral Shooter, and dual Limelight cameras for automatic alignment and efficient scoring.",
-  };
-  
+};
+
 const cards = [
     {
         title: "Swerve Drive System",
@@ -19,6 +23,7 @@ const cards = [
         `,
         details: `Powered by 4 NEO Brushless drive motors and 4 NEO Brushless steering motors, our swerve drive system is capable of reaching a maximum speed of 14.5 ft/s.
         In addition, our team fine-tuned the PIDF values of the drive motors to ensure that the robot can drive straight and turn smoothly.`,
+        image: swerveImg,
     },
     {
         title: "Elevator Subsystem",
@@ -29,6 +34,7 @@ const cards = [
         `,
         details: `With optical sensors mounted on the elevator, our robot can automatically stop at the correct height to help drivers save more time in the compeittion.
         `,
+        image: elevatorImg,
     },
     {
         title: "Coral Shooter",
@@ -38,6 +44,7 @@ const cards = [
 
         `,
         details: `Beyond launching, the Coral Shooter subsystem is designed for acquiring game pieces directly from the human player at the "coral station". This integration streamlines the scoring cycle, allowing for faster acquisition and subsequent launching of game pieces.`,
+        image: shooterImg,
     },
     {
         title: "Limelight Cameras",
@@ -47,6 +54,7 @@ const cards = [
         `,
         details: `Utilizing a dual Limelight camera setup, the robot gains robust tracking information. We mounted one Limelight 2 at the front of the robot for "reef" localization, and one Limelight 3A at the back in order to provide localization data of "coral stations".
         This automatic alignment capability minimizes the time drivers need for manual aiming, freeing them to focus on strategy and improving the overall speed and reliability of scoring actions, particularly when coordinating with the Coral Shooter and Elevator Subsystem.`,
+        image: limelightImg,
     },
 ]
 
@@ -94,14 +102,74 @@ export default function Home() {
                 <div key={index} className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
                     <h1 className={"text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 " + card.titleColor}>{card.title}</h1>
                     <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8">{card.subtitle}</h1>
-                    <p className="text-xl px-6 sm:px-0">
-                        {card.description}<br/><br/>
-                        {card.details}
-                    </p>
+
+                    {index == 0 && (
+                        <>
+                            <p className="text-xl px-6 sm:px-0">
+                                {card.description}</p>
+
+                            <Image src={card.image} alt="Swerve Drive" className=" bg-gray-300 dark:bg-gray-800 h-[50vh] sm:h-[70vh] sm:rounded-3xl mt-6 object-cover" quality={50} />
+                            <p className="mt-6 text-xl px-6 sm:px-0">
+                                {card.details}
+                            </p>
+                        </>
+                    )}
+
+                    {index != 0 && (
+                        <>
+                            <div className="sm:flex hidden">
+                                <div className="w-1/2">
+                                    <p className="text-xl px-6 sm:px-0">
+                                        {card.description}
+                                        <br /><br />
+                                        {card.details}
+                                    </p>
+                                </div>
+                                <Image src={card.image} alt="Swerve Drive" className=" bg-gray-300 dark:bg-gray-800 h-[50vh] sm:rounded-3xl ml-8 object-cover w-1/2" quality={50} />
+                            </div>
+
+                            <div className="block *:sm:hidden">
+                                <p className="text-xl px-6 sm:px-0">
+                                    {card.description}</p>
+
+                                <Image src={card.image} alt="Swerve Drive" className=" bg-gray-300 dark:bg-gray-800 h-[50vh] sm:h-[70vh] sm:rounded-3xl mt-6 object-cover" quality={50} />
+                                <p className="mt-6 text-xl px-6 sm:px-0">
+                                    {card.details}
+                                </p>
+                            </div>
+
+
+                        </>
+                    )}
                 </div>
             ))}
-            
 
+            <div className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
+                <h1 className={"text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 opacity-80 text-blue-700"}>&apos;25 REEFSCAPE</h1>
+                <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8">The Robot we Made.</h1>
+
+                <p className="text-xl px-6 sm:px-0">
+                    We at Rōnin Robotics are proud to present Taketsune, our robot engineered for the 2025 REEFSCAPE<sup>SM</sup> season. </p>
+
+                <Image src={bannerImg} alt="Swerve Drive" className=" bg-gray-300 dark:bg-gray-800 h-[98vh] sm:rounded-3xl mt-6 object-cover" quality={85} />
+                <p className="mt-6 text-xl px-6 sm:px-0">
+                    Key highlights include its highly maneuverable Swerve Drive system, a reliable Level 3 Elevator for upper-level scoring, an accurate Coral Shooter for launching game pieces, and a sophisticated dual Limelight camera system enabling automatic target alignment for both &quot;reef&quot; and &quot;coral station&quot; localization. These features combine to create a versatile and competitive robot that we believe will excel in efficient scoring and strategic gameplay.
+                </p>
+            </div>
+
+            <div className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
+                <h1 className={"text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 opacity-80 text-purple-700"}>Resources</h1>
+                <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8">Including Our Code Repository.</h1>
+
+                <p className="text-xl px-6 sm:px-0 ui-content">
+                    The code repository can be found in our GitHub organization: <Link href="https://github.com/ronin7447/2025-reefscape" className="a-link">ronin7447/2025-reefscape</Link>.
+                    <br/><br/>
+                    Follow our Instagram (<Link href="https://www.instagram.com/frc7447/" className="a-link">@frc7447</Link>) for more updates on our robot and the 2025 season!
+                    <div className="mb-48"></div>
+                </p>
+
+        
+            </div>
 
         </div>
     )
