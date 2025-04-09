@@ -33,9 +33,14 @@ export const metadata: Metadata = {
     description: "Ronin Robotics (FRC Team 7447) is a high school robotics team from Portola High School, Irvine, CA consisting of 30+ members that participate in FIRST® Robotics Competitions along with thousands of teams and students worldwide. Our team strives to provide real-world engineering experiences through competitive robotics. Our team values a sense of community and teamwork while implementing various innovative techniques to challenge young minds. We hope to empower students with the skills they need to pursue their passion in STEM and become leaders of innovation.",
     url: "https://7447.team",
     siteName: "Rōnin Robotics: FRC Team 7447",
+    // images: [
+    //   "/opengraph-image.png",
+    // ]
     
-  }
-};
+  },
+  metadataBase: new URL('https://7447.team'),
+}
+
 
 export default function RootLayout({
   children,
