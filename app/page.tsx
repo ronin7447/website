@@ -42,8 +42,10 @@ export default async function Home() {
 
     <div className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
       <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 md:mb-12">About us</h1>
-      <p className="text-xl px-6 sm:px-0">
-      Rōnin Robotics Team 7447 consists of 30+ members that participate in FIRST® Robotics Competitions along with thousands of teams and students worldwide. Our team strives to provide real-world engineering experiences through competitive robotics and values a sense of community and teamwork while implementing various innovative techniques to challenge young minds. We hope to empower students with the skills they need to pursue their passion in STEM and become leaders of innovation.
+      <p className="text-lg sm:text-xl px-6 sm:px-0">
+      Rōnin Robotics Team 7447 consists of 30+ members who participate in FIRST® Robotics Competitions along with thousands of teams and students worldwide.
+      Our team strives to provide real-world engineering experiences through competitive robotics and values a sense of community and teamwork while implementing various innovative techniques to challenge young minds.
+      We hope to inspire and empower students with the skills for them to pursue passions in STEM and become leaders of innovation.
        <br/><br/>
        The team builds a competitive robot with industrial-grade equipment in the span of only 6 weeks. We go through a comprehensive effort to oversee the robot-building process from start to finish. We work diligently in and out of the classroom, spending countless hours to perfect our craft. We are divided into specialized sub-teams during build season to be more efficient and collaborative. Outside of build season, students experience and learn every technical activity to further their knowledge.
 
@@ -52,7 +54,7 @@ export default async function Home() {
       </div>
       <div className="max-w-screen-xl sm:px-6 mt-16 mb-24 mx-auto">
       <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 md:mb-12">Contact us</h1>
-      <p className="text-xl px-6 sm:px-0 ui-content">
+      <p className="text-lg sm:text-xl px-6 sm:px-0 ui-content">
         Email: <Link href="mailto:first.robotics.portola@gmail.com" className="a-link">first.robotics.portola@gmail.com</Link><br/>
         Follow us on Instagram: <Link href="https://www.instagram.com/frc7447/" className="a-link">@frc7447</Link><br/>
         Visit our GitHub repositories: <Link href="https://github.com/ronin7447" className="a-link">@ronin7447</Link><br/><br/>
