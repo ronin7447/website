@@ -25,7 +25,7 @@ export default async function Home() {
                     <div className="w-full">
                         <div className="max-w-screen-xl mx-auto px-6">
                             <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter">Rōnin Robotics <span className="whitespace-nowrap">Team 7447</span></h1>
-                            <p className="mt-4 text-lg sm:text-xl">High School Robotics Team from Portola High School, Irvine, CA.</p>
+                            <p className="mt-4 text-lg sm:text-xl">Rookie High School FIRST® Robotics Competition Team, from Portola High School, Irvine, CA <span className="whitespace-nowrap">since 2019</span>.</p>
                         </div>
                         <div className="absolute bottom-1 right-2 select-none opacity-25 text-sm">
                         <p>&copy; Jun Yu</p>

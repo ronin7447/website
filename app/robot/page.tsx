@@ -72,8 +72,6 @@ export default function Home() {
     <div className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
       <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter px-6 sm:px-0 mb-8 md:mb-12"></h1>
       <p className="text-xl px-6 sm:px-0">
-        The page is under construction.
-       
       </p>
       </div>
       

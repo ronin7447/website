@@ -9,10 +9,10 @@ const navitems = [
         name: "Robot",
         url: "/robot"
     },
-    // {
-    //     name: "Sponsors",
-    //     url: "/sponsors"
-    // },
+    {
+        name: "Sponsors",
+        url: "/sponsors"
+    },
     {
         name: "About",
         url: "/about"
@@ -76,7 +76,7 @@ export default function Navbar() {
                 <li className="ui-nav-inline"><Link href={navitems[0].url}>{navitems[0].name}</Link></li>
                 {(navitems.map((item, index) => {
                     if (index === 0) return;
-                    return <li className="ui-nav-inline ml-3 sm:ml-6" key={index}><Link href={item.url}>{item.name}</Link></li>
+                    return <li className="ui-nav-inline ml-3 sm:ml-4" key={index}><Link href={item.url}>{item.name}</Link></li>
                 }))}
             </ul>
             </div>

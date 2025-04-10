@@ -14,7 +14,6 @@ export default function BotIntroCard() {
         <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 ">Our Robot for the 2025 Season.</h1>
         <p className="text-xl px-6 sm:px-0 mb-8">
           Learn more about our robot for the 2025 season <Link className="a-link" href="/robot/reefscape">REEFSCAPE<sup>SM</sup> presented by Haas: Taketsune</Link>.
-          <br/><br/>The page is under construction.
         </p>
         <CardNavigator />
         <div className="flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scroll-pl sm:scroll-pl-16 h-[600px] pl-2 pr-2 sm:pl-0 sm:pr-0 ui-intro-cards">
@@ -46,6 +45,6 @@ export default function BotIntroCard() {
       </div>
      
           
-        </div>
+    </div>
     )
 }
