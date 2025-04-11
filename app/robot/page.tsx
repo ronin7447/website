@@ -1,6 +1,6 @@
 import Image from "next/image";
 // import Link from "next/link";
-import bannerImg from "@/public/67A02359.jpg"
+import bannerImg from "@/public/avr-featured.jpg"
 import BotIntroCard from "../components/BotIntroCard";
 
 
@@ -24,7 +24,7 @@ export default function Home() {
                   layout="fill"
                   // blurDataURL=""
                 />
-                <div className="relative z-10 w-full min-h-[60vh] h-full max-h-screen flex justify-start items-center bg-[rgba(0,0,0,0.40)]">
+                <div className="relative z-10 w-full min-h-[60vh] h-full max-h-screen flex justify-start items-center bg-[rgba(0,0,0,0.50)]">
                     <div className="w-full">
                         <div className="max-w-screen-xl mx-auto px-6">
                             <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter">The <span className="whitespace-nowrap">Robots</span> We Built</h1>
