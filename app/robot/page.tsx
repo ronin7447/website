@@ -1,6 +1,6 @@
 import Image from "next/image";
 // import Link from "next/link";
-import bannerImg from "@/public/avr-featured.jpg"
+import bannerImg from "@/public/67A02359.jpg"
 import BotIntroCard from "../components/BotIntroCard";
 
 
