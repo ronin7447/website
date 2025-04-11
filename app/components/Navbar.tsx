@@ -23,12 +23,12 @@ const navitems = [
 export default function Navbar() {
     const [navtitle, setNavtitle] = useState<string>("ui-nav-title-show")
     const [pageY, setPageY] = useState(0);
-    const [lstupdt, setLstupdt] = useState(new Date().getTime());
+    // const [lstupdt, setLstupdt] = useState(new Date().getTime());
     const onScroll = useCallback(() => {
         const { scrollY } = window;
         setPageY(prevPageY => {
             if (prevPageY === 0) {
-                setLstupdt(new Date().getTime());
+                // setLstupdt(new Date().getTime());
                 return scrollY;
             }
             if (scrollY - prevPageY > 200) {
@@ -40,7 +40,7 @@ export default function Navbar() {
             }
             return prevPageY;
         });
-    }, [pageY, lstupdt]);
+    }, []);
 
     useEffect(() => {
         //add eventlistener to window
@@ -49,7 +49,7 @@ export default function Navbar() {
         return () => {
             window.removeEventListener("scroll", onScroll);
         }
-    }, []);
+    }, [onScroll]);
 
     useEffect(() => {
         // console.log("PageY updated:", pageY);
