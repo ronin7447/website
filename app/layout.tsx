@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Link from "next/link";
+import Script from "next/script";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -125,6 +126,7 @@ export default function RootLayout({
           </div>
         </footer>
       </body>
+      <Script defer src="/insights/script.js" data-website-id="eebc5da4-7e5f-4dd0-ae60-1c34394f6063" data-host-url="/insights" strategy="lazyOnload" data-domains="7447.team"/>
     </html>
   );
 }

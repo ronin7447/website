@@ -4,6 +4,14 @@ import { useState } from "react";
 interface ContactFormProps {
   formName?: string;
 }
+declare global {
+  interface Window {
+    umami?: {
+      track: (eventName: string, eventData?: Record<string, unknown>) => void;
+      identify: (userData: Record<string, unknown>) => void;
+    };
+  }
+}
 
 export default function ContactForm({ formName = 'Contact Form' }: ContactFormProps) {
   const [showOverlay, setShowOverlay] = useState(false);
@@ -42,6 +50,9 @@ export default function ContactForm({ formName = 'Contact Form' }: ContactFormPr
           setShowOverlay(false);
           setIsSuccess(false); // Reset success state after timeout
         }, 3000);
+        if (typeof window.umami === 'object' && typeof window.umami.identify === 'function') {
+          window.umami.identify({ name: formObject.name, email: formObject.email, organization: formObject.organization });
+        }
       })
       .catch(error => {
         console.error("Form submission error:", error);
