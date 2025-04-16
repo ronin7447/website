@@ -30,7 +30,7 @@ export default function ContactForm({ formName = 'Contact Form' }: ContactFormPr
     
 
 
-    fetch("/", {
+    fetch("/__forms.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formObject).toString()
