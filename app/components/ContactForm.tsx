@@ -89,12 +89,12 @@ export default function ContactForm({ formName = 'Contact Form' }: ContactFormPr
       <form className="space-y-6 mx-auto" onSubmit={handleSubmit} data-netlify="true" netlify-honeypot="bot-field" name={formName}>
         {/* Netlify needs this hidden input for form identification */}
         <input type="hidden" name="form-name" value={formName} />
-        {/* <div className="hidden">
+        <div className="hidden">
           <label htmlFor="bot-name">
           Don’t fill this out if you’re human:
           </label>
          <input name="bot-name" />
-        </div> */}
+        </div>
         {/* ... existing form fields ... */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div className="space-y-2">
