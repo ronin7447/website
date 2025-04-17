@@ -8,10 +8,10 @@ const nextConfig: NextConfig = {
         source: '/insights/script.js',
         destination: 'https://cloud.umami.is/script.js',
       },
-      {
-        source: '/insights/api/send', // Adjust if Umami uses a different endpoint
-        destination: 'https://cloud.umami.is/api/send', // Adjust if Umami uses a different endpoint
-      },
+      // {
+      //   source: '/insights/api/send', // Adjust if Umami uses a different endpoint
+      //   destination: 'https://cloud.umami.is/api/send', // Adjust if Umami uses a different endpoint
+      // },
     ];
   },
 };
