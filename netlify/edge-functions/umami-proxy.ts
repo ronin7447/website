@@ -16,6 +16,9 @@ export default async function handler(
   const headers = new Headers(request.headers);
   headers.set("X-Forwarded-For", realIP);
   headers.set("X-Real-IP", realIP);
+  headers.set("true-client-ip", realIP);
+  headers.set("x-client-ip", realIP);
+
 
   const response = await fetch(targetUrl, {
     method: request.method,
@@ -29,7 +32,7 @@ export default async function handler(
     headers: {
       ...response.headers,
       "rn-server": "ronin-edge@"+context.server.region,
-      "rn-ip": realIP,
+      "rn-ip": btoa(realIP),
     },
   });
 }
