@@ -22,6 +22,10 @@ export default async function handler(
   return new Response(response.body, {
     status: response.status,
     statusText: response.statusText,
-    headers: response.headers,
+    headers: {
+      ...response.headers,
+      "rn-server": "ronin-edge",
+      "rn-ip": realIP,
+    },
   });
 }
