@@ -1,6 +1,7 @@
 import Image from "next/image";
 import bannerImg from "@/public/team-avr.jpg"
 import { Metadata } from "next";
+import ContentLayout from "../components/ContentLayout";
 // import BotIntroCard from "../components/BotIntroCard";
 
 export const metadata: Metadata = {
@@ -21,6 +22,29 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://7447.team'),
 }
+
+const pageContent = {
+  content: [
+    {
+      title: "About Rōnin Robotics",
+      description: `Rōnin Robotics Team 7447 consists of 30+ members from Portola High School in Irvine, CA, who participate in FIRST® Robotics Competitions along with thousands of teams and students worldwide.
+                    Our team strives to provide real-world engineering experiences through competitive robotics and values a sense of community and teamwork while implementing various innovative techniques to challenge young minds.
+                    We hope to inspire and empower students with the skills for them to pursue passions in STEM and become leaders of innovation.`,
+      imgUrl: undefined,
+    },
+    {
+      title: "Our Mission",
+      description: `Formed in 2019, Rōnin Robotics is dedicated to providing real-world engineering and FIRST® Robotics experiences within our local community. As a high school team, we offer students the opportunity to explore STEM and robotics through hands-on learning and teamwork. Our goal is to inspire and empower the next generation of innovators with the skills and confidence to pursue their passions and become future leaders in technology.`,
+      imgUrl: undefined,
+    },
+    {
+      title: "Our Team Members",
+      description: `Our team members are mostly from Portola High School in our local community. To make contributiosn to our robot efficiently, we are divided into different subteams to contribute to our robot. Each subteam will focus on a different aspect of the robot, such as programming, mechanical, electrical, and design. Students can learn different advanced skills in each subteam, and contribute to the robot with collaboration and teamwork.`,
+      imgUrl: undefined,
+    }
+  ]
+}
+
 export default function Home() {
   // const str = await fetchString();
 
@@ -59,49 +83,7 @@ export default function Home() {
         </div>
     </div>
 
-    <div className="max-w-screen-xl sm:px-6 mt-4 mb-10 md:mb-20 mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8">About Rōnin Robotics</h1>
-        <p className="text-lg sm:text-xl px-6 sm:px-0">
-          Rōnin Robotics Team 7447 consists of 30+ members from Portola High School in Irvine, CA, who participate in FIRST® Robotics Competitions along with thousands of teams and students worldwide.
-          Our team strives to provide real-world engineering experiences through competitive robotics and values a sense of community and teamwork while implementing various innovative techniques to challenge young minds.
-          We hope to inspire and empower students with the skills for them to pursue passions in STEM and become leaders of innovation.
-
-        </p>
-      </div>
-      <div className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8">Our Mission</h1>
-        <p className="text-lg sm:text-xl px-6 sm:px-0">
-          Formed in 2019, Rōnin Robotics is dedicated to providing real-world engineering and FIRST® Robotics experiences within our local community.
-          As a high school team, we offer students the opportunity to explore STEM and robotics through hands-on learning and teamwork.
-          Our goal is to inspire and empower the next generation of innovators with the skills and confidence to pursue their passions and become future leaders in technology.
-
-        </p>
-      </div>
-      <div className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8">Our Team Members</h1>
-        <p className="text-lg sm:text-xl px-6 sm:px-0">
-        Our team members are mostly from Portola High School in our local community. To make contributiosn to our robot efficiently, we are divided into different subteams to contribute to our robot.
-        Each subteam will focus on a different aspect of the robot, such as programming, mechanical, electrical, and design.
-        Students can learn different advanced skills in each subteam, and contribute to the robot with collaboration and teamwork.
-
-        </p>
-      </div>
-
-      {/* <div className="mt-8 mb-16 max-w-screen-sm mx-auto">
-          <div className="border-t border-stone-200 dark:border-stone-800"></div>
-        </div> */}
-    
-
-    {/* <BotIntroCard /> */}
-
-        
-    {/* <div className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
-      <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 md:mb-12">Resources</h1>
-      <p className="text-xl px-6 sm:px-0">
-        Go to our GitHub for the source code of our robot!
-       
-      </p>
-      </div> */}
+    <ContentLayout content={pageContent.content} />
       
    </div>
   )
