@@ -1,12 +1,16 @@
-// import type { Context } from "@netlify/edge-functions";
+import type { Context } from "@netlify/edge-functions";
 
 export default async function handler(
-  request: Request): Promise<Response> {
+  request: Request,
+  context: Context
+): Promise<Response> {
   const url = new URL(request.url);
   const path = url.pathname.replace(/^\/insights\/api/, "/api");
   const targetUrl = `https://cloud.umami.is${path}${url.search}`;
 
-  const realIP = request.headers.get("x-nf-client-connection-ip") ?? "";
+  // const realIP = request.headers.get("x-nf-client-connection-ip") ?? "";
+
+  const realIP = context.ip;
 
   // Clone headers and inject the real client IP
   const headers = new Headers(request.headers);
@@ -24,7 +28,7 @@ export default async function handler(
     statusText: response.statusText,
     headers: {
       ...response.headers,
-      "rn-server": "ronin-edge",
+      "rn-server": "ronin-edge@"+context.server.region,
       "rn-ip": realIP,
     },
   });
