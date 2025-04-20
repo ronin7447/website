@@ -18,6 +18,7 @@ export default async function handler(
   headers.set("X-Real-IP", realIP);
   headers.set("true-client-ip", realIP);
   headers.set("x-client-ip", realIP);
+  headers.set("cf-connecting-ip", realIP);
 
 
   const response = await fetch(targetUrl, {
