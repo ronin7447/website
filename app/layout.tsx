@@ -1,25 +1,16 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Link from "next/link";
-import Script from "next/script";
+import UmamiAnalytics from "./components/UmamiAnalytics"; // Import the new component
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
 
+// Metadata can still be exported from client components in the app router
 export const metadata: Metadata = {
   title: "Rōnin Robotics: FRC Team 7447",
   description: "Ronin Robotics (FRC Team 7447) is a high school robotics team from Portola High School, Irvine, CA consisting of 30+ members that participate in FIRST® Robotics Competitions along with thousands of teams and students worldwide. Our team strives to provide real-world engineering experiences through competitive robotics. Our team values a sense of community and teamwork while implementing various innovative techniques to challenge young minds. We hope to empower students with the skills they need to pursue their passion in STEM and become leaders of innovation.",
@@ -48,6 +39,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
@@ -61,35 +53,6 @@ export default function RootLayout({
               <Link href="/"><h1 translate="no">Rōnin Robotics</h1></Link>
             </div>
             <div className="text-right">
-              {/* <div className="mb-3">
-              <div className="space-y-2 inline-flex items-baseline">
-              <div className="relative text-sm">
-                <div className="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-                  <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
-                    <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
-                    <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
-                  </svg>
-                </div>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="Email"
-                  required
-                  className="w-full ps-10 px-4 py-2 rounded-md border border-gray-700 bg-stone-800 focus:outline-none focus:ring-2 focus:ring-gray-700"
-                />
-                
-             </div>  
-             <button
-              type="submit"
-              className="ml-2 px-3 py-2.5 text-sm bg-gray-700 text-white rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700 cursor-pointer"
-            >
-              Submit
-            </button>
-            
-              </div>
-              </div> */}
-
               <div className="flex flex-wrap gap-3 mb-1 sm:mb-3 text-base sm:text-lg justify-end">
                 <Link href="mailto:first.robotics.portola@gmail.com"
                   className="inline-flex  items-center rounded-full font-medium text-gray-200 ">
@@ -125,8 +88,9 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        {/* Render the client component for analytics */}
+        <UmamiAnalytics />
       </body>
-      <Script defer src="/insights/script.js" data-website-id="eebc5da4-7e5f-4dd0-ae60-1c34394f6063" data-host-url="/insights" strategy="lazyOnload" data-domains="7447.team"/>
     </html>
   );
 }
