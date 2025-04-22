@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
       //   destination: 'https://cloud.umami.is/api/send', // Adjust if Umami uses a different endpoint
       // },
     ];
+    
   },
 };
 
