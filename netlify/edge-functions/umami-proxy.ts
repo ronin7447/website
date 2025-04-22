@@ -6,7 +6,7 @@ export default async function handler(
 ): Promise<Response> {
   const url = new URL(request.url);
   const path = url.pathname.replace(/^\/insights\/api/, "/api");
-  const targetUrl = `https://api-gateway.umami.dev${path}${url.search}`;
+  const targetUrl = `https://74${path}${url.search}`;
 
   // const realIP = request.headers.get("x-nf-client-connection-ip") ?? "";
 
