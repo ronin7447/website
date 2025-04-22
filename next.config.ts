@@ -13,7 +13,19 @@ const nextConfig: NextConfig = {
       //   destination: 'https://cloud.umami.is/api/send', // Adjust if Umami uses a different endpoint
       // },
     ];
-    
+  },
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          {
+            key: "Netlify-Vary",
+            value: "query=_rsc",
+          },
+        ],
+      },
+    ];
   },
 };
 
