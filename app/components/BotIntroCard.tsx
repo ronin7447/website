@@ -4,7 +4,7 @@ import limelightImg from "@/public/reefscape/limelight.png"
 import swerveImg from "@/public/reefscape/swerve.jpg"
 import elevatorImg from "@/public/reefscape/elevator.jpg"
 import shooterImg from "@/public/reefscape/shooter.jpg"
-import bannerImg from "@/public/67A02062-Enhanced-NR.jpg"
+import bannerImg from "@/public/robot_images/67A02062-Enhanced-NR.jpg"
 import Image from "next/image";
 
 export default function BotIntroCard() {

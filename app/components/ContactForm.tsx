@@ -117,7 +117,7 @@ export default function ContactForm({ formName = 'Contact Form' }: ContactFormPr
               name="name"
               type="text"
               required
-              className="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-stone-800 focus:outline-none focus:ring-2 focus:ring-gray-700 dark:focus:ring-gray-600"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-stone-800 focus:outline-none focus:ring-2 focus:ring-gray-700 dark:focus:ring-gray-600"
             />
           </div>
           <div className="space-y-2">
@@ -129,7 +129,7 @@ export default function ContactForm({ formName = 'Contact Form' }: ContactFormPr
               name="email"
               type="email"
               required
-              className="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-stone-800 focus:outline-none focus:ring-2 focus:ring-gray-700 dark:focus:ring-gray-600"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-stone-800 focus:outline-none focus:ring-2 focus:ring-gray-700 dark:focus:ring-gray-600"
             />
           </div>
         </div>
@@ -142,7 +142,7 @@ export default function ContactForm({ formName = 'Contact Form' }: ContactFormPr
             id="organization"
             name="organization"
             type="text"
-            className="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-stone-800 focus:outline-none focus:ring-2 focus:ring-gray-700 dark:focus:ring-gray-600"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-stone-800 focus:outline-none focus:ring-2 focus:ring-gray-700 dark:focus:ring-gray-600"
           />
         </div>
 
@@ -154,14 +154,14 @@ export default function ContactForm({ formName = 'Contact Form' }: ContactFormPr
             id="message"
             name="message"
             rows={5}
-            className="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-stone-800 focus:outline-none focus:ring-2 focus:ring-gray-700 dark:focus:ring-gray-600"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-stone-800 focus:outline-none focus:ring-2 focus:ring-gray-700 dark:focus:ring-gray-600"
           ></textarea>
         </div>
 
         <div>
           <button
             type="submit"
-            className="float-right px-6 py-2 bg-gray-700 text-white font-medium rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700 cursor-pointer mr-1 mb-1"
+            className="float-right px-6 py-2 bg-gray-700 text-white font-medium rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700 cursor-pointer mr-1 mb-1"
           >
             Submit
           </button>

@@ -82,6 +82,7 @@ export default function Home() {
     </div>
 
     <ContentLayout content={pageContent.content} />
+    <div className="pb-16 md:pb-24"></div>
       
    </div>
   )

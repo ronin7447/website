@@ -23,7 +23,7 @@ export default function ContentLayout({ content }: ContentProps) {
                     )} */}
                 </div>
             ))}
-            <div className="pb-8 md:pb-12 "></div>
+            
         </div>
     );
 }
