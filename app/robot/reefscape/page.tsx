@@ -1,6 +1,6 @@
 import Image from "next/image";
 // import Link from "next/link";
-import bannerImg from "@/public/67A02062-Enhanced-NR.jpg"
+import bannerImg from "@/public/robot_images/67A02062-Enhanced-NR.jpg"
 import type { Metadata } from "next";
 import limelightImg from "@/public/reefscape/limelight.png"
 import swerveImg from "@/public/reefscape/swerve.jpg"
