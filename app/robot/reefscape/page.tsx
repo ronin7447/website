@@ -165,10 +165,10 @@ export default function Home() {
                     The code repository can be found in our GitHub organization: <Link href="https://github.com/ronin7447/2025-reefscape" className="a-link">ronin7447/2025-reefscape</Link>.
                     <br/><br/>
                     Follow our Instagram (<Link href="https://www.instagram.com/frc7447/" className="a-link">@frc7447</Link>) for more updates on our robot and the 2025 season!
-                    <div className="mb-48"></div>
+                    
                 </p>
-
-        
+                <div className="mb-48"></div>
+                        
             </div>
 
         </div>

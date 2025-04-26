@@ -95,7 +95,7 @@ export default function Home() {
         <div className="mt-2 sm:mt-0 grid grid-cols-1 gap-2 sm:w-2/5">
           <div className="bg-purple-100 dark:bg-purple-950 dark:text-purple-100 text-purple-900 p-6 rounded-3xl flex items-center">
             <div className="-mt-1">
-              <p className="text-5xl md:text-6xl lg:text-7xl font-semibold text-purple-700 dark:text-purple-200 tracking-[-0.3rem] lg:tracking-[-0.65rem] transform-[scale(1,0.94)]">40+</p>
+              <p className="text-5xl md:text-6xl lg:text-7xl font-semibold text-purple-700 dark:text-purple-200 tracking-[-0.3rem] lg:tracking-[-0.60rem] transform-[scale(1,0.94)]">40+</p>
             <p className="text-2xl md:text-4xl font-semibold leading-none mt-1">
               members from our local high school.
             </p>
