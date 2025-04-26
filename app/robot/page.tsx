@@ -37,7 +37,7 @@ export default function Home() {
      {/* Replace the existing banner div with the updated Banner component usage */}
      <Banner
         title={<>The <span className="whitespace-nowrap">Robots</span> We Built</>}
-        subtitle="Rookie FIRST® Robotics Team from Portola High School, Irvine, CA since 2019."
+        subtitle="FIRST® Robotics Team from Portola High School, Irvine, CA since 2019."
         imageSources={{
           default: {
             src: bannerImg,

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@netlify/edge-functions": "^2.11.1",
     "@netlify/plugin-nextjs": "^5.10.1",
     "next": "^15.3.1",

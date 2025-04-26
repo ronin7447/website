@@ -13,13 +13,17 @@ const pageContent = {
   content: [
     {
       title: "About Rōnin Robotics",
+      titleColor: "",
+      subtitle: "",
       description: `Rōnin Robotics Team 7447 consists of 30+ members from Portola High School in Irvine, CA, who participate in FIRST® Robotics Competitions along with thousands of teams and students worldwide. Our team strives to provide real-world engineering experiences through competitive robotics and values a sense of community and teamwork while implementing various innovative techniques to challenge young minds. We hope to inspire and empower students with the skills for them to pursue passions in STEM and become leaders of innovation.`,
-      imgUrl: undefined,
+      imgUrl: null,
     },
     {
       title: "Our Mission",
+      titleColor: "",
+      subtitle: "",
       description: `Formed in 2019, Rōnin Robotics is dedicated to providing real-world engineering and FIRST® Robotics experiences within our local community. As a high school team, we offer students the opportunity to explore STEM and robotics through hands-on learning and teamwork. Our goal is to inspire and empower the next generation of innovators with the skills and confidence to pursue their passions and become future leaders in technology.`,
-      imgUrl: undefined,
+      imgUrl: null,
     },
   ],
 }
@@ -32,7 +36,7 @@ export default function Home() {
       {/* Replace the old banner section with the Banner component */}
       <Banner
         title={<>Rōnin Robotics <span className="whitespace-nowrap">Team 7447</span></>}
-        subtitle="Rookie High School FIRST® Robotics Competition Team, from Portola High School, Irvine, CA since 2019."
+        subtitle="High School FIRST® Robotics Competition Team, from Portola High School, Irvine, CA since 2019."
         imageSources={{
           default: {
             src: bannerImg,
@@ -41,7 +45,7 @@ export default function Home() {
         }}
         imageAlt="Ronin Robotics 7447 Robot at OC Regional 2025."
         imageCredit="Jun Yu"
-        useBlur={true}
+        useBlur={false}
         imagePriority={true} // Make the LCP image priority
       />
 

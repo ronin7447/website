@@ -27,6 +27,19 @@ interface BannerProps {
   prioritySourceKey?: string[]; // This is a bit unclear, but seems to be for determining which image to prioritize
 }
 
+const generateBlurUrl = (src: string) => {
+    const str = `
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 320'>
+    <filter id='b' color-interpolation-filters='sRGB'>
+    <feGaussianBlur stdDeviation='3'/>
+    <feColorMatrix values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1' result='s'/><feFlood x='0' y='0' width='100%' height='100%'/>
+    <feComposite operator='out' in='s'/><feComposite in2='SourceGraphic'/><feGaussianBlur stdDeviation='3'/>
+    </filter>
+    <image width='100%' height='100%' x='0' y='0' preserveAspectRatio='none' style='filter: url(#b);' href='${src}'/>
+    </svg>`;
+    return Buffer.from(str).toString('base64');
+}
+
 export default function Banner({
   title,
   subtitle,
@@ -66,7 +79,7 @@ export default function Banner({
               backgroundSize: "cover", // Use cover to fill
               objectFit: "cover"
             }}
-            placeholder={useBlur ? "blur" : "empty"}
+            placeholder={useBlur ? "blur" : (imageSources.default.blurDataURL ?`data:image/svg+xml;base64,${generateBlurUrl(imageSources.default.blurDataURL)}` : "empty")}
             blurDataURL={imageSources.default.blurDataURL}
             priority={imagePriority && prioritySourceKey.includes('default')}
             fill // Use fill layout
@@ -80,7 +93,7 @@ export default function Banner({
               quality={imageQuality}
               className={`object-cover top-0 left-0 w-full h-full z-0 hidden md:block ${imageSources.lg ? 'lg:hidden' : ''}`}
               style={{ backgroundPosition: "center", backgroundSize: "cover", objectFit: "cover" }}
-              placeholder={useBlur && imageSources.md.blurDataURL ? "blur" : "empty"}
+              placeholder={useBlur ? "blur" : (imageSources.md.blurDataURL ?`data:image/svg+xml;base64,${generateBlurUrl(imageSources.md.blurDataURL)}` : "empty")}
               blurDataURL={imageSources.md.blurDataURL}
               priority={imagePriority && prioritySourceKey.includes('md')}
               fill
@@ -95,7 +108,7 @@ export default function Banner({
               quality={imageQuality}
               className={`object-cover top-0 left-0 w-full h-full z-0 hidden lg:block ${imageSources.xl ? 'xl:hidden' : ''}`}
               style={{ backgroundPosition: "center", backgroundSize: "cover", objectFit: "cover" }}
-              placeholder={useBlur && imageSources.lg.blurDataURL ? "blur" : "empty"}
+              placeholder={useBlur ? "blur" : (imageSources.lg.blurDataURL ?`data:image/svg+xml;base64,${generateBlurUrl(imageSources.lg.blurDataURL)}` : "empty")}
               blurDataURL={imageSources.lg.blurDataURL}
               priority={imagePriority && prioritySourceKey.includes('lg')}
               fill
@@ -110,7 +123,7 @@ export default function Banner({
               quality={imageQuality}
               className="object-cover top-0 left-0 w-full h-full z-0 hidden xl:block"
               style={{ backgroundPosition: "center", backgroundSize: "cover", objectFit: "cover" }}
-              placeholder={useBlur && imageSources.xl.blurDataURL ? "blur" : "empty"}
+              placeholder={useBlur ? "blur" : (imageSources.xl.blurDataURL ?`data:image/svg+xml;base64,${generateBlurUrl(imageSources.xl.blurDataURL)}` : "empty")}
               blurDataURL={imageSources.xl.blurDataURL}
               priority={imagePriority && prioritySourceKey.includes('xl')}
               fill
