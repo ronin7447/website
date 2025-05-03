@@ -1,5 +1,6 @@
 import Image from "next/image";
 import bannerImg from "@/public/robot_images/67A02955.jpg";
+import bannerImg2 from "@/public/robot_images/67A02062-Enhanced-NR.jpg"
 // import iusdImg from "@/public/sponsors/iusd.png";
 // import portolaImg from "@/public/sponsors/portola.png";
 import Link from "next/link";
@@ -35,8 +36,8 @@ export default function Home() {
         <Image src={bannerImg} alt="Team Banquet 2025" className="w-full h-[100vh] object-cover object-center fixed -z-20 top-0 left-0" quality={80} placeholder="blur" priority />
         <div className="-z-10 bg-black/60 w-full h-full fixed top-0 left-0"></div>
         <div className="max-w-screen-xl mx-auto mb-[12vh] px-6 z-10">
-            <h1 className="text-[5.25rem] tracking-[-0.4rem] sm:text-9xl sm:tracking-[-0.5rem] lg:text-[9rem] lg:tracking-[-0.6rem] font-semibold leading-none dark:text-blue-200 text-sky-500">Rōnin</h1>
-            <h1 className="text-[5.25rem] tracking-[-0.4rem] sm:text-9xl sm:tracking-[-0.5rem] lg:text-[9rem] lg:tracking-[-0.6rem] font-bold leading-none text-white">Team Banquet</h1>
+            <h1 className="text-[5.25rem] tracking-[-0.5rem] sm:text-9xl sm:tracking-[-0.6rem] lg:text-[9rem] lg:tracking-[-0.7rem] font-semibold leading-none dark:text-blue-200 text-sky-300">Rōnin</h1>
+            <h1 className="text-[5.25rem] tracking-[-0.5rem] sm:text-9xl sm:tracking-[-0.6rem] lg:text-[9rem] lg:tracking-[-0.7rem] font-medium leading-none text-white">Team Banquet</h1>
             <p className="mt-8 sm:mt-12 md:mt-16 text-xl sm:text-2xl md:text-3xl tracking-tighter sm:px-0 opacity-90 text-white">
             We would like to invite you to our annual team banquet to celebrate the hard work and achievements of this year’s FIRST® Robotics Competition season!
 
@@ -45,13 +46,13 @@ export default function Home() {
     </div>
     
   <div className="bg-white dark:bg-stone-950 pb-24">
-    <div className="w-full justify-center items-start flex bg-sky-800">
-        <div className="w-full max-w-[1920px] mx-auto mb-[12vh] lg:mb-[16vh] px-6 z-10 mt-[4vh]">
+    <div className="w-full justify-center items-start flex bg-stone-200 text-stone-800">
+        <div className="w-full max-w-[1920px] mx-auto mb-32 px-6 z-10 mt-[4vh]">
             {/* <h1 className="text-8xl tracking-[-0.4rem] sm:text-9xl sm:tracking-[-0.5rem] lg:text-[9rem] lg:tracking-[-0.6rem] font-semibold leading-none dark:text-blue-200 text-sky-500">Event Details</h1> */}
-            <h1 className="text-8xl tracking-[-0.4rem] sm:text-9xl sm:tracking-[-0.5rem] lg:text-[9rem] lg:tracking-[-0.6rem] font-semibold leading-none text-white">Event Details</h1>
+            <h1 className="text-8xl tracking-[-0.4rem] sm:text-9xl sm:tracking-[-0.5rem] lg:text-[9rem] lg:tracking-[-0.7rem] font-medium leading-none">Event Details</h1>
             <div className="w-full  mt-16 ">
     <div className="w-full">
-    <p className="text-2xl sm:text-3xl md:text-4xl tracking-tighter sm:px-0 opacity-90 text-white">
+    <p className="text-2xl sm:text-3xl md:text-4xl tracking-tighter sm:px-0 opacity-90 ">
                 Location: <b>1001 Cadence, Irvine, CA 92618 (Portola High School Student Union).</b><br/><br/>
                 Date: <b>Thursday May 29th, 2025.</b><br/><br/>
                 Time: <b>5:30 PM - 7:00 PM.</b><br/><br/>
@@ -69,22 +70,15 @@ export default function Home() {
             
         </div>
     </div>
-    <div className="w-full justify-center items-start flex bg-cyan-800">
-        <div className="w-full max-w-[1920px] mx-auto mb-[12vh] px-6 z-10 mt-[4vh]">
-            {/* <h1 className="text-8xl tracking-[-0.4rem] sm:text-9xl sm:tracking-[-0.5rem] lg:text-[9rem] lg:tracking-[-0.6rem] font-semibold leading-none dark:text-blue-200 text-sky-500">Event Details</h1> */}
-            <h1 className="text-7xl tracking-[-0.3rem] sm:text-8xl sm:tracking-[-0.4rem] lg:text-[8rem] lg:tracking-[-0.5rem] font-semibold leading-none text-white">We are looking forward to <span className="lg:whitespace-nowrap">see you there!</span></h1>
-            <div className="w-full  mt-16 ">
-    <div className="w-full">
-    <p className="text-2xl sm:text-3xl md:text-4xl tracking-tighter sm:px-0 opacity-90 text-white">
-                Follow our Instagram (@frc7447) for updates and more information about our team and events!<br/><br/>
-                <i>Further information will be posted soon.</i>
-                </p>
-
-                </div>
-                
-        
-            </div>
-            
+      <div className="w-full h-[92vh] justify-center items-center flex relative">
+        <Image src={bannerImg2} alt="Team Banquet 2025" className="w-full h-[92vh] object-cover object-center absolute  top-0 left-0" quality={80} placeholder="blur" priority />
+        <div className=" bg-black/60 w-full h-full absolute top-0 left-0"></div>
+        <div className="max-w-screen-xl mx-auto mb-[12vh] px-6 z-10">
+            <h1 className="text-[5.25rem] tracking-[-0.5rem] sm:text-9xl sm:tracking-[-0.6rem] lg:text-[9rem] lg:tracking-[-0.7rem] font-semibold leading-none dark:text-blue-200 text-sky-300">Celebrate</h1>
+            <h1 className="text-[5.25rem] tracking-[-0.5rem] sm:text-9xl sm:tracking-[-0.6rem] lg:text-[9rem] lg:tracking-[-0.7rem] font-medium leading-none text-white">with us</h1>
+            <p className="mt-8 sm:mt-12 md:mt-16 text-xl sm:text-2xl md:text-3xl tracking-tighter sm:px-0 opacity-90 text-white">
+            Follow our Instagram (@frc7447) for updates and more information about our team and events, and we would love to see you there!
+            </p>
         </div>
     </div>
       <div className="max-w-screen-xl sm:px-6 mx-auto bg-white  dark:bg-stone-950">
