@@ -35,8 +35,8 @@ export default function Home() {
         <Image src={bannerImg} alt="Team Banquet 2025" className="w-full h-[100vh] object-cover object-center fixed -z-20 top-0 left-0" quality={80} placeholder="blur" priority />
         <div className="-z-10 bg-black/60 w-full h-full fixed top-0 left-0"></div>
         <div className="max-w-screen-xl mx-auto mb-[12vh] px-6 z-10">
-            <h1 className="text-8xl tracking-[-0.4rem] sm:text-9xl sm:tracking-[-0.5rem] lg:text-[9rem] lg:tracking-[-0.6rem] font-semibold leading-none dark:text-blue-200 text-sky-500">Rōnin</h1>
-            <h1 className="text-8xl tracking-[-0.4rem] sm:text-9xl sm:tracking-[-0.5rem] lg:text-[9rem] lg:tracking-[-0.6rem] font-bold leading-none text-white">Team Banquet</h1>
+            <h1 className="text-[5.25rem] tracking-[-0.4rem] sm:text-9xl sm:tracking-[-0.5rem] lg:text-[9rem] lg:tracking-[-0.6rem] font-semibold leading-none dark:text-blue-200 text-sky-500">Rōnin</h1>
+            <h1 className="text-[5.25rem] tracking-[-0.4rem] sm:text-9xl sm:tracking-[-0.5rem] lg:text-[9rem] lg:tracking-[-0.6rem] font-bold leading-none text-white">Team Banquet</h1>
             <p className="mt-8 sm:mt-12 md:mt-16 text-xl sm:text-2xl md:text-3xl tracking-tighter sm:px-0 opacity-90 text-white">
             We would like to invite you to our annual team banquet to celebrate the hard work and achievements of this year’s FIRST® Robotics Competition season!
 
