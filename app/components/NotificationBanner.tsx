@@ -36,12 +36,12 @@ export default function NotificationBanner({
 
   return (
     // Apply opacity based on isVisible state
-    <div className={`pt-3 pb-4 absolute mx-auto ${backgroundColor} ${textColor} w-full transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`pt-3 pb-3 absolute mx-auto ${backgroundColor} ${textColor} w-full transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       {/* ... existing inner content ... */}
       <div className="max-w-screen-xl mx-auto flex justify-between items-center gap-4 px-6">
         <div className="flex-grow">
-          <p className="font-semibold text-lg ">{title}</p>
-          <p className="text-base">
+          <p className="font-semibold text-lg leading-tight">{title}</p>
+          <p className="text-base leading-tight mt-0.5 sm:mt-0">
             {content}{" "}
             {link && (
               <Link href={link.url} className="underline font-medium hover:opacity-80">
