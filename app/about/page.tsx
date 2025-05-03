@@ -114,7 +114,7 @@ export default function Home() {
         </div>
         </div>
       </div>
-      <div className="max-w-screen-xl mx-auto px-6 pb-4 sm:pb-8 tracking-tighter md:tracking-[-0.16rem] mt-2.5">
+      <div className="max-w-screen-xl mx-auto px-6 pb-4 sm:pb-8 tracking-tighter md:tracking-[-0.16rem] mt-2">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-8">
           <div className="grid grid-cols-1 gap-2">
            <div className="bg-yellow-100 dark:bg-yellow-950 dark:text-yellow-100 text-yellow-900 p-6 rounded-3xl flex items-center space-x-3">

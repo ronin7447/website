@@ -3,6 +3,7 @@
 import { useState, useCallback, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 import NotificationBanner from "./NotificationBanner"; // Import the new component
 
 const title = "Rōnin Robotics"
@@ -25,18 +26,22 @@ const navitems = [
 
 // Define notification content (example)
 const notification = {
-    show: false, // Control initial visibility
+    show: true, // Control initial visibility
     title: "We invite you to our 2025 team banquet!",
     content: "We'll hold our team banquet on May 29th, 2025, and we look forward to seeing you there! ", 
-    link: { url: "/join", text: "Click here to learn more." },
+    link: { url: "/banquet?utm_source=promotion_banner", text: "Click here to learn more." },
     backgroundColor: "bg-blue-100 dark:bg-blue-900",
     textColor: "text-blue-800 dark:text-blue-100",
+    ignorePath: ["/banquet"]
 };
 
 export default function Navbar() {
     const [navtitle, setNavtitle] = useState<string>("ui-nav-title-show")
     const [pageY, setPageY] = useState(0);
     const [showNotification, setShowNotification] = useState(false); // State for banner visibility
+    const pathname = usePathname();
+    const isIgnoredPath = notification.ignorePath.some(path => pathname.startsWith(path));
+
 
     const onScroll = useCallback(() => {
         const { scrollY } = window;
@@ -80,7 +85,12 @@ export default function Navbar() {
       if (dismissed === 'true') {
         setShowNotification(false);
       } else {
-        setShowNotification(notification.show);
+        if (isIgnoredPath) {
+            setShowNotification(false);
+        } else {
+            setShowNotification(notification.show);
+        }
+        
       }
     }, []);
 
