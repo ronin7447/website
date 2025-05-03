@@ -44,7 +44,7 @@ export default function Home() {
         </div>
     </div>
     
-  <div className="bg-white pb-24">
+  <div className="bg-white dark:bg-stone-950 pb-24">
     <div className="w-full justify-center items-start flex bg-sky-800">
         <div className="w-full max-w-[1920px] mx-auto mb-[12vh] lg:mb-[16vh] px-6 z-10 mt-[4vh]">
             {/* <h1 className="text-8xl tracking-[-0.4rem] sm:text-9xl sm:tracking-[-0.5rem] lg:text-[9rem] lg:tracking-[-0.6rem] font-semibold leading-none dark:text-blue-200 text-sky-500">Event Details</h1> */}
