@@ -87,7 +87,7 @@ export default function Home() {
             
         </div>
     </div>
-      <div className="max-w-screen-xl sm:px-6 mx-auto bg-white">
+      <div className="max-w-screen-xl sm:px-6 mx-auto bg-white  dark:bg-stone-950">
       
       
       <div className="block md:flex  mt-16 ">
