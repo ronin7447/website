@@ -3,7 +3,7 @@ import bannerImg from "@/public/robot_images/67A02955.jpg";
 // import iusdImg from "@/public/sponsors/iusd.png";
 // import portolaImg from "@/public/sponsors/portola.png";
 import Link from "next/link";
-import ContactForm from "../components/ContactForm";
+import ContactForm from "@/app/components/ContactForm";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Team Banquet 2025 - Rōnin Robotics (FRC Team 7447)",
