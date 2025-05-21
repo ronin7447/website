@@ -53,16 +53,17 @@ export default function Home() {
             <div className="w-full  mt-16 ">
     <div className="w-full">
     <p className="text-2xl sm:text-3xl md:text-4xl tracking-tighter sm:px-0 opacity-90 ">
-                Location: <b>1001 Cadence, Irvine, CA 92618 (Portola High School Student Union).</b><br/><br/>
+                Location: <b>Portola High School Student Union</b><br/><br/>
+                Address: <b>1001 Cadence, Irvine, CA 92618.</b><br/><br/>
                 Date: <b>Thursday May 29th, 2025.</b><br/><br/>
-                Time: <b>5:30 PM - 7:00 PM.</b><br/><br/>
+                Time: <b>5:30 p.m. - 7:00 p.m.</b><br/><br/>
                 <i>Further information will be posted soon.</i>
                 </p>
                 
                 <button className="mt-16 text-2xl sm:text-3xl md:text-4xl tracking-tighter opacity-90 text-white cursor-pointer bg-sky-700 rounded-full px-6 py-4 md:px-12 md:py-8">
                     <Link href="https://maps.app.goo.gl/NQte9BkHCWHjua9m8">Navigation (Google Maps)</Link></button><br />
                     <button className="mt-8 text-2xl sm:text-3xl md:text-4xl tracking-tighter opacity-90 text-white cursor-pointer bg-amber-700 rounded-full px-6 py-4 md:px-12 md:py-8">
-                    <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf1s2kpwkfe0Z2QBLoZ2UyLsTyKeiBOJcrXZYt8y2eEN6rGBw/viewform">Sign-up Form</Link></button>
+                    <Link href="https://docs.google.com/forms/d/e/1FAIpQLScR1_k5hkGpDt3DPYoR2aqCYoSrAb0UP0Sl0BJ0YW3WuB7z2w/viewform">Sign-up Form (RSVP)</Link></button>
                 </div>
                 
         
