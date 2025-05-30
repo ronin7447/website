@@ -26,7 +26,7 @@ const navitems = [
 
 // Define notification content (example)
 const notification = {
-    show: true, // Control initial visibility
+    show: false, // Control initial visibility
     title: "We invite you to our 2025 team banquet!",
     content: "We'll hold our team banquet on May 29th, 2025, and we look forward to seeing you there! ", 
     link: { url: "/banquet?utm_source=promotion_banner", text: "Click here to learn more." },
