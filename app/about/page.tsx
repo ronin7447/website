@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import ContentLayout from "../components/ContentLayout";
 import Banner from "../components/Banner"; // Import the Banner component
 // import BotIntroCard from "../components/BotIntroCard";
+import Image from "next/image";
 import { MapPinIcon, TrophyIcon } from "@heroicons/react/24/outline";
 export const metadata: Metadata = {
   title: "About Rōnin Robotics - Rōnin Robotics (FRC Team 7447)",
@@ -48,6 +49,63 @@ const pageContent = {
     }
   ]
 }
+
+const subteamContent = {
+  content: [
+    {
+      title: "Mechanical Engineering Team",
+      titleSize: "text-2xl sm:text-3xl",
+      titleColor: "",
+      subtitle: "",
+      description: `The mechanical team is responsible for building and assembling the robot’s structural and moving parts. From the drivetrain to the intake and scoring mechanisms, they turn designs into functional components through hands-on fabrication and testing. They collaborated with the CAD team closely to ensure precise part integration. Members learn how to use tools, work with different materials, and ensure the robot is competition-ready. They also need to conduct repairs, maintenance, and upgrades throughout the season to keep the robot in top condition.`,
+      imgUrl: null,
+    },
+    {
+      title: "Electronics and Electrical Engineering Team",
+      titleSize: "text-2xl sm:text-3xl",
+      titleColor: "",
+      subtitle: "",
+      description: `The electronics team handles all wiring, power distribution, and electrical components on the robot. They install motor controllers, sensors, and the RoboRIO, ensuring that everything is safely and cleanly connected. Members learn to troubleshoot hardware issues and keep the robot running reliably during matches. Their work is critical to linking hardware and software together. They also need to maintain the electrical board and resolve hardware issues during competitions.`,
+      imgUrl: null,
+    },
+    {
+      title: "Programming and Software Team",
+      titleSize: "text-2xl sm:text-3xl",
+      titleColor: "",
+      subtitle: "",
+      description: `The programming team is responsible for the software of the robot. They write the code that makes the robot function. Using Java and tools including WPILib, they develop autonomous plans, teleoperated control systems, and integrate feedback from sensors. They collaborate closely with mechanical and electronics teams to test and refine robot behavior. Members also learn software development practices and real-world problem solving through iteration and debugging.`,
+      imgUrl: null,
+    },
+    {
+      title: "Design and CAD Team",
+      titleSize: "text-2xl sm:text-3xl",
+      titleColor: "",
+      subtitle: "",
+      description: `The CAD and Design team creates digital 3D models of the robot using professional software. These designs guide the mechanical team during fabrication and help prevent issues before building begins. They’re responsible for ensuring precision and compatibility between all subsystems. Members gain experience in design thinking, geometry, and translating concepts into build-ready plans.`,
+      imgUrl: null,
+    },
+    {
+      title: "Business Team",
+      titleSize: "text-2xl sm:text-3xl",  
+      titleColor: "",
+      subtitle: "",
+      description: `The Social Media and Business team manages the team’s branding, community outreach, and sponsor relations. They run social media accounts, create content, and help tell the story of Rōnin Robotics. On the business side, they assist with fundraising, grant writing, and organizing team events. Their work helps sustain the team financially and build connections beyond robotics.`,
+      imgUrl: null,
+    }
+  ]
+}
+
+// const endContent = {
+//   content: [
+//     {
+//       title: "To learn more about Rōnin Robotics?",
+//       titleColor: "",
+//       subtitle: "yes ",
+//       description: `The Social Media and Business team manages the team’s branding, community outreach, and sponsor relations. They run social media accounts, create content, and help tell the story of Rōnin Robotics. On the business side, they assist with fundraising, grant writing, and organizing team events. Their work helps sustain the team financially and build connections beyond robotics.`,
+//       imgUrl: null,
+//     }
+//   ]
+// }
 
 export default function Home() {
   // const str = await fetchString();
@@ -97,7 +155,7 @@ export default function Home() {
             <div className="-mt-1">
               <p className="text-5xl md:text-6xl lg:text-7xl font-semibold text-purple-700 dark:text-purple-200 tracking-[-0.3rem] lg:tracking-[-0.60rem] transform-[scale(1,0.94)]">40+</p>
             <p className="text-2xl md:text-4xl font-semibold leading-none mt-1">
-              members from our local high school.
+              members from our local <span className="whitespace-nowrap">high school.</span>
             </p>
             </div>
           </div>
@@ -146,7 +204,14 @@ export default function Home() {
         </div>
       </div>
 
-      <ContentLayout content={pageContent.content} />
+      <ContentLayout content={pageContent.content} /> 
+       <div className="max-w-screen-xl mx-auto px-6 pb-4 sm:pb-8 tracking-tighter mt-6 mb-6">
+        <Image src={bannerImg} alt="Ronin Robotics at AVR 2025" className="w-full object-cover object-center mt-12 mb-1" quality={80} placeholder="blur" loading="lazy" />
+        <p><i className="text-lg">Rōnin Robotics at FIRST® Robotics Competition Aerospace Valley Regional 2025.</i></p>
+       </div>
+      <ContentLayout content={subteamContent.content} />
+      <div className="pb-12 md:pb-16"></div>
+      {/* <ContentLayout content={endContent.content} />  */}
       <div className="pb-16 md:pb-24"></div>
 
     </div>
