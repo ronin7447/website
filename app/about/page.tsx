@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import ContentLayout from "../components/ContentLayout";
 import Banner from "../components/Banner"; // Import the Banner component
 // import BotIntroCard from "../components/BotIntroCard";
-import Image from "next/image";
+// import Image from "next/image";
 import { MapPinIcon, TrophyIcon } from "@heroicons/react/24/outline";
 export const metadata: Metadata = {
   title: "About Rōnin Robotics - Rōnin Robotics (FRC Team 7447)",
@@ -35,17 +35,19 @@ const pageContent = {
     },
     {
       title: "Our Mission",
-      titleColor: "",
-      subtitle: "",
+      titleColor: "text-blue-500 dark:text-blue-400",
+      subtitle: "Empowering students through STEM and hands-on innovation.",
       description: `Formed in 2019, Rōnin Robotics is dedicated to providing real-world engineering and FIRST® Robotics experiences within our local community. As a high school team, we offer students the opportunity to explore STEM and robotics through hands-on learning and teamwork. Our goal is to inspire and empower the next generation of innovators with the skills and confidence to pursue their passions and become future leaders in technology.`,
       imgUrl: null,
     },
     {
       title: "Our Team Members",
-      titleColor: "",
-      subtitle: "",
+      titleColor: "text-sky-600 dark:text-sky-500",
+      subtitle: "Collaborating Through Specialized Subteams to Build and Innovate.",
       description: `Our team members are mostly from Portola High School in our local community. To make contributiosn to our robot efficiently, we are divided into different subteams to contribute to our robot. Each subteam will focus on a different aspect of the robot, such as programming, mechanical, electrical, and design. Students can learn different advanced skills in each subteam, and contribute to the robot with collaboration and teamwork.`,
       imgUrl: null,
+      imgBelow: bannerImg,
+      altText: "Rōnin Robotics at FIRST® Robotics Competition Aerospace Valley Regional 2025.",
     }
   ]
 }
@@ -135,7 +137,7 @@ export default function Home() {
       />
 
       <div className="max-w-screen-xl mx-auto px-6  tracking-tighter md:tracking-[-0.16rem]">
-         <h1 className={`text-3xl sm:text-4xl font-semibold tracking-tighter sm:px-0 mb-8 sm:mb-12`}>About Rōnin Robotics</h1>
+         <h1 className={`text-3xl sm:text-4xl font-semibold tracking-tighter sm:px-0 mb-8 sm:mb-12`}>Meet Rōnin Robotics</h1>
         <div className="grid grid-cols-1 sm:flex">
           <div className="grid grid-cols-1 gap-2 sm:mr-2 sm:w-3/5">
           <div className="bg-sky-100 dark:bg-sky-950 dark:text-blue-100 text-sky-900 md:px-8 md:py-12 p-6 rounded-3xl flex items-center">
@@ -205,10 +207,7 @@ export default function Home() {
       </div>
 
       <ContentLayout content={pageContent.content} /> 
-       <div className="max-w-screen-xl mx-auto px-6 pb-4 sm:pb-8 tracking-tighter mt-6 mb-6">
-        <Image src={bannerImg} alt="Ronin Robotics at AVR 2025" className="w-full object-cover object-center mt-12 mb-1" quality={80} placeholder="blur" loading="lazy" />
-        <p><i className="text-lg">Rōnin Robotics at FIRST® Robotics Competition Aerospace Valley Regional 2025.</i></p>
-       </div>
+      <div className="pb-8"></div>
       <ContentLayout content={subteamContent.content} />
       <div className="pb-12 md:pb-16"></div>
       {/* <ContentLayout content={endContent.content} />  */}

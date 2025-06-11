@@ -39,8 +39,28 @@ export default function Home() {
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-12 sm:px-0 px-6">
-        <Link href="https://iusd.org/" rel="nofollow"><Image src={iusdImg} alt="Irvine Unified School District" className="w-full rounded-lg" width={500} quality={75} placeholder="blur" /></Link>
-        <Link href="https://portolahigh.iusd.org/" rel="nofollow"><Image src={portolaImg} alt="Portola High School" className="w-full rounded-lg" width={500} quality={75} placeholder="blur" /></Link>
+        <div className="relative">
+          <Link href="https://iusd.org/" rel="nofollow"
+        >
+          <div className="w-full h-full opacity-0 hover:opacity-100 absolute inset-0 bg-black/30 backdrop-blur-md rounded-md z-10 text-white transition-all flex items-center">
+            <p className="text-2xl font-semibold px-6 lg:mb-2 leading-none">Irvine Unifed School District</p>
+          </div>
+          <Image src={iusdImg} alt="Irvine Unified School District" className="w-full rounded-md transition-all -z-10" width={500} quality={75} placeholder="blur" />
+        
+        </Link>
+        </div>
+
+      
+        <div className="relative">
+          <Link href="https://portolahigh.iusd.org/" rel="nofollow"
+        >
+          <div className="w-full h-full opacity-0 hover:opacity-100 absolute inset-0 bg-black/30 backdrop-blur-md rounded-md z-10 text-white transition-all flex items-center">
+            <p className="text-2xl font-semibold px-6 lg:mb-2 leading-none">Portola High School</p>
+          </div>
+          <Image src={portolaImg} alt="Portola High School" className="w-full rounded-md transition-all -z-10" width={500} quality={75} placeholder="blur" />
+
+        </Link>
+        </div>
       </div>
 
       
