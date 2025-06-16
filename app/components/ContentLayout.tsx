@@ -47,7 +47,7 @@ export default function ContentLayout({ content }: ContentProps) {
                                 loading="lazy" 
                             />
                             {item.altText && (
-                                <p><i className="text-lg">{item.altText}</i></p>
+                                <p className="mt-2"><i className="text-lg leading-tight">{item.altText}</i></p>
                             )}
                         </div>
                     )}
