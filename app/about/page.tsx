@@ -43,7 +43,7 @@ const pageContent = {
     {
       title: "Our Team Members",
       titleColor: "text-sky-600 dark:text-sky-500",
-      subtitle: "Collaborating Through Specialized Subteams to Build and Innovate.",
+      subtitle: "Collaborating through specialized subteams to build and innovate.",
       description: `Our team members are mostly from Portola High School in our local community. To make contributiosn to our robot efficiently, we are divided into different subteams to contribute to our robot. Each subteam will focus on a different aspect of the robot, such as programming, mechanical, electrical, and design. Students can learn different advanced skills in each subteam, and contribute to the robot with collaboration and teamwork.`,
       imgUrl: null,
       imgBelow: bannerImg,
@@ -155,7 +155,7 @@ export default function Home() {
         <div className="mt-2 sm:mt-0 grid grid-cols-1 gap-2 sm:w-2/5">
           <div className="bg-purple-100 dark:bg-purple-950 dark:text-purple-100 text-purple-900 p-6 rounded-3xl flex items-center">
             <div className="-mt-1">
-              <p className="text-5xl md:text-6xl lg:text-7xl font-semibold text-purple-700 dark:text-purple-200 tracking-[-0.3rem] lg:tracking-[-0.60rem] transform-[scale(1,0.94)]">40+</p>
+              <p className="text-5xl md:text-6xl lg:text-7xl font-semibold text-purple-700 dark:text-purple-200 tracking-[-0.3rem] lg:tracking-[-0.50rem] transform-[scale(1,0.94)]">40+</p>
             <p className="text-2xl md:text-4xl font-semibold leading-none mt-1">
               members from our local <span className="whitespace-nowrap">high school.</span>
             </p>
