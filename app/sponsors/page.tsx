@@ -1,5 +1,6 @@
 import Image from "next/image";
 import iusdImg from "@/public/sponsors/iusd.png";
+import ghfImg from "@/public/sponsors/ghf-dark.png";
 import portolaImg from "@/public/sponsors/portola.png";
 import Link from "next/link";
 import ContactForm from "../components/ContactForm";
@@ -61,10 +62,42 @@ export default function Home() {
 
         </Link>
         </div>
+        
+      </div>
+      {/* for more sponsors  */}
+      {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4 mt-12 sm:px-0 px-6">
+        <div className="relative">
+          <Link href="https://www.ghaasfoundation.org/" rel="nofollow"
+        >
+          <div className="w-full md:w-4/5 h-full opacity-0 hover:opacity-100 absolute inset-0 bg-black/30 backdrop-blur-md rounded-md z-10 text-white transition-all flex items-center">
+            <p className="text-2xl font-semibold px-6 lg:mb-2 leading-none">Gene Haas Foundation</p>
+          </div>
+          <Image src={ghfImg} alt="Gene Haas Foundation" className="w-full md:w-4/5 rounded-md transition-all -z-10" width={350} quality={75} placeholder="blur" />
+
+        </Link>
+        </div>
+        
+      </div> */}
+
+        <div className="w-full mx-auto mt-12 sm:px-0 px-6">
+        <div className="relative w-1/3 mx-auto">
+          <Link href="https://www.ghaasfoundation.org/" rel="nofollow"
+        >
+          <div className="w-full md:w-4/5 h-full opacity-0 hover:opacity-100 absolute inset-0 bg-black/30 backdrop-blur-md rounded-md z-10 text-white transition-all flex items-center">
+            <p className="text-2xl font-semibold px-6 lg:mb-2 leading-none">Gene Haas Foundation</p>
+          </div>
+          <Image src={ghfImg} alt="Gene Haas Foundation" className="w-full md:w-4/5 rounded-md transition-all -z-10" width={350} quality={75} placeholder="blur" />
+
+        </Link>
+        </div>
+        
       </div>
 
+
       
-      <div className="block md:flex  mt-16 ">
+
+      
+      <div className="block md:flex  mt-24 ">
         <div className="px-6 sm:px-0 mb-12 md:mb-0 md:mr-12 w-full md:w-1/2">
         <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter mb-8 ">Support Rōnin Robotics</h1>
         <p className="text-lg md:text-xl ">

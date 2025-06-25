@@ -9,6 +9,10 @@ import NotificationBanner from "./NotificationBanner"; // Import the new compone
 const title = "Rōnin Robotics"
 const navitems = [
     {
+        name: "Home",
+        url: "/"
+    },
+    {
         name: "Robot",
         url: "/robot"
     },
