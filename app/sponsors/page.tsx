@@ -80,7 +80,7 @@ export default function Home() {
       </div> */}
 
         <div className="w-full mx-auto mt-12 sm:px-0 px-6">
-        <div className="relative w-1/3 mx-auto">
+        <div className="relative w-1/2 sm:w-1/3 mx-auto">
           <Link href="https://www.ghaasfoundation.org/" rel="nofollow"
         >
           <div className="w-full md:w-4/5 h-full opacity-0 hover:opacity-100 absolute inset-0 bg-black/30 backdrop-blur-md rounded-md z-10 text-white transition-all flex items-center">
