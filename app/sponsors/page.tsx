@@ -44,7 +44,7 @@ export default function Home() {
             <div className="max-w-screen-xl mx-auto">
               <h1 className={`text-2xl sm:text-3xl font-semibold tracking-tighter px-6 sm:px-0 text-sky-600 dark:text-blue-300`}><Link href={"https://iusd.org/"} rel="nofollow">Irvine Unified School District</Link></h1>
               <div className="md:flex block mt-8">
-                <div className="w-full block md:hidden mb-6">
+                <div className="w-full block md:hidden mb-6 px-6 ">
                   <Link href={"https://iusd.org/"} rel="nofollow"><Image src={iusdImg} alt="IUSD" className="w-full h-auto max-w-[420px] mx-auto bg-white p-2" /></Link>
                 
               </div>
@@ -89,7 +89,7 @@ export default function Home() {
             <div className="max-w-screen-xl mx-auto">
               <h1 className={`text-2xl sm:text-3xl font-semibold tracking-tighter px-6 sm:px-0 text-red-600 dark:text-red-300`}><Link href={"https://ghaasfoundation.org/"} rel="nofollow">Gene Haas Foundation</Link></h1>
               <div className="md:flex block mt-8">
-                <div className="w-full block md:hidden mb-6">
+                <div className="w-full block md:hidden mb-6 px-6">
                 <Link href={"https://ghaasfoundation.org/"} rel="nofollow"><Image src={ghfImg} alt="Gene Haas Foundation" className="w-full h-auto max-w-[220px] mx-auto" /></Link>
               </div>
                 <div className="w-full md:w-3/5 mr-0 md:mr-12">

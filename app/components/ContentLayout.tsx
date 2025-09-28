@@ -37,7 +37,7 @@ export default function ContentLayout({ content }: ContentProps) {
                     </div>
                     {/* Image below content section */}
                     {item.imgBelow && (
-                        <div className="max-w-screen-xl mx-auto px-6 pb-4 sm:pb-8 tracking-tighter mt-10 md:mt-12">
+                        <div className="max-w-screen-xl mx-auto pb-4 sm:pb-8 tracking-tighter mt-10 md:mt-12 px-0 md:px-6">
                             <Image 
                                 src={item.imgBelow} 
                                 alt={item.altText || item.title} 
@@ -47,7 +47,7 @@ export default function ContentLayout({ content }: ContentProps) {
                                 loading="lazy" 
                             />
                             {item.altText && (
-                                <p className="mt-2"><i className="text-lg leading-tight">{item.altText}</i></p>
+                                <p className="mt-2 px-6 md:px-0"><i className="text-lg leading-tight">{item.altText}</i></p>
                             )}
                         </div>
                     )}

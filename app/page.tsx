@@ -26,7 +26,7 @@ const pageContent = {
       description: `Formed in 2019, Rōnin Robotics is dedicated to providing real-world engineering and FIRST® Robotics experiences within our local community. As a high school team, students don't need to have any previous experience to join. We offer students the opportunity to explore STEM and robotics through hands-on learning and teamwork. Our goal is to inspire and empower the next generation of innovators with the skills and confidence to pursue their passions and become future leaders in technology.`,
       imgUrl: null,
       imgBelow: mediaTeamImg,
-      altText: "Rōnin Robotics Team Member Cheer at FIRST® Robotics Competition Aerospace Valley Regional 2025.",
+      altText: "Rōnin Robotics Team Members Cheer at FRC Aerospace Valley Regional 2025.",
     },
   ],
 }
