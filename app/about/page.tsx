@@ -30,7 +30,7 @@ const pageContent = {
       title: "",
       titleColor: "",
       subtitle: "",
-      description: `Rōnin Robotics Team 7447 consists of 40+ members from Portola High School in Irvine, CA, who participate in FIRST® Robotics Competitions along with thousands of teams and students worldwide. Our team strives to provide real-world engineering experiences through competitive robotics and values a sense of community and teamwork while implementing various innovative techniques to challenge young minds. We hope to inspire and empower students with the skills for them to pursue passions in STEM and become leaders of innovation.`,
+      description: `Rōnin Robotics Team 7447 consists of 45+ members from Portola High School in Irvine, CA, who participate in FIRST® Robotics Competitions along with thousands of teams and students worldwide. Our team strives to provide real-world engineering experiences through competitive robotics and values a sense of community and teamwork while implementing various innovative techniques to challenge young minds. We hope to inspire and empower students with the skills for them to pursue passions in STEM and become leaders of innovation.`,
       imgUrl: null,
     },
     {
@@ -155,7 +155,7 @@ export default function Home() {
         <div className="mt-2 sm:mt-0 grid grid-cols-1 gap-2 sm:w-2/5">
           <div className="bg-purple-100 dark:bg-purple-950 dark:text-purple-100 text-purple-900 p-6 rounded-3xl flex items-center">
             <div className="-mt-1">
-              <p className="text-5xl md:text-6xl lg:text-7xl font-semibold text-purple-700 dark:text-purple-200 tracking-[-0.3rem] lg:tracking-[-0.50rem] transform-[scale(1,0.94)]">40+</p>
+              <p className="text-5xl md:text-6xl lg:text-7xl font-semibold text-purple-700 dark:text-purple-200 tracking-[-0.3rem] lg:tracking-[-0.50rem] transform-[scale(1,0.94)]">45+</p>
             <p className="text-2xl md:text-4xl font-semibold leading-none mt-1">
               members from our local <span className="whitespace-nowrap">high school.</span>
             </p>
