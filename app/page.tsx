@@ -16,7 +16,7 @@ const pageContent = {
       title: "About Rōnin Robotics",
       titleColor: "text-blue-500 dark:text-blue-400",
       subtitle: "Inspiring students through robotics and STEM.",
-      description: `Rōnin Robotics Team 7447 consists of 45+ members from Portola High School in Irvine, CA, who participate in FIRST® Robotics Competitions along with thousands of teams and students worldwide. We are student-led and organized into mechanical, electrical, programming, CAD, and business subteams. From kickoff to competition, members plan, prototype, machine, wire, code, test, and document complete industrial-level robots within six weeks, then share our work through demos, workshops, and community events.`,
+      description: `Rōnin Robotics Team 7447 consists of 65+ members from Portola High School in Irvine, CA, who participate in FIRST® Robotics Competitions along with thousands of teams and students worldwide. We are student-led and organized into mechanical, electrical, programming, CAD, and business subteams. From kickoff to competition, members plan, prototype, machine, wire, code, test, and document complete industrial-level robots within six weeks, then share our work through demos, workshops, and community events.`,
       imgUrl: null,
     },
     {
