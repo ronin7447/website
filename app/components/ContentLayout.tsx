@@ -25,9 +25,12 @@ export default function ContentLayout({ content }: ContentProps) {
                         {(item.subtitle && item.subtitle != "") && (
                             <h1 className={`${item.titleSize ? item.titleSize : "text-3xl sm:text-4xl"} font-semibold tracking-tighter px-6 sm:px-0 mb-8`}>{item.subtitle}</h1>
                         )}
+                        {(item.description && item.description != "") &&(
                         <p className="text-lg sm:text-xl px-6 sm:px-0 whitespace-pre-line">
                             {item.description}
                         </p>
+                        )}
+                        
                         {/* Optional: Add image rendering logic here if item.imgUrl exists */}
                         {/* {item.imgUrl && (
                             <div className="mt-8">

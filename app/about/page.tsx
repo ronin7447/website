@@ -1,4 +1,5 @@
-import bannerImg from "@/public/team-avr.jpg";
+import bannerImg from "@/public/team_photo/IMG_8375_2-4.jpg";
+import avrImg from "@/public/team-avr.jpg";
 import { Metadata } from "next";
 import ContentLayout from "../components/ContentLayout";
 import Banner from "../components/Banner"; // Import the Banner component
@@ -37,16 +38,25 @@ const pageContent = {
       title: "Our Mission",
       titleColor: "text-blue-500 dark:text-blue-400",
       subtitle: "Empowering students through STEM and hands-on innovation.",
-      description: `Formed in 2019, Rōnin Robotics is dedicated to providing real-world engineering and FIRST® Robotics experiences within our local community. As a high school team, we offer students the opportunity to explore STEM and robotics through hands-on learning and teamwork. Our goal is to inspire and empower the next generation of innovators with the skills and confidence to pursue their passions and become future leaders in technology.`,
+      description: `Formed in 2019, Rōnin Robotics is dedicated to providing real-world engineering experiences through FIRST® Robotics Competition within our local community. As a high school team, we are quickly growing to offer students the opportunity to explore STEM and robotics through hands-on learning and teamwork. Our goal is to inspire and empower the next generation of innovators with the skills and confidence to pursue their passions and become future leaders in technology.`,
       imgUrl: null,
     },
     {
       title: "Our Team Members",
       titleColor: "text-sky-600 dark:text-sky-500",
       subtitle: "Collaborating through specialized subteams to build and innovate.",
-      description: `Our team members are mostly from Portola High School in our local community. To make contributiosn to our robot efficiently, we are divided into different subteams to contribute to our robot. Each subteam will focus on a different aspect of the robot, such as programming, mechanical, electrical, and design. Students can learn different advanced skills in each subteam, and contribute to the robot with collaboration and teamwork.`,
+      description: `Our team members are from multiple public high schools in Irvine, California, including Portola High School and Northwood High School. To make contributiosn to our robot efficiently, we are divided into different subteams to contribute to our robot. Each subteam will focus on a different aspect of the robot, such as programming, mechanical, electrical, and design. Students can learn different advanced skills in each subteam, and contribute to the robot with collaboration and teamwork.`,
       imgUrl: null,
       imgBelow: bannerImg,
+      altText: "Rōnin Robotics 2025-26 Team Photo",
+    },
+    {
+      title: "",
+      titleColor: "",
+      subtitle: "",
+      description: ``,
+      imgUrl: null,
+      imgBelow: avrImg,
       altText: "Rōnin Robotics at FIRST® Robotics Competition Aerospace Valley Regional 2025.",
     }
   ]
@@ -63,7 +73,7 @@ const subteamContent = {
       imgUrl: null,
     },
     {
-      title: "Electronics and Electrical Engineering Team",
+      title: "Electrical Engineering Team",
       titleSize: "text-2xl sm:text-3xl",
       titleColor: "",
       subtitle: "",
@@ -71,11 +81,11 @@ const subteamContent = {
       imgUrl: null,
     },
     {
-      title: "Programming and Software Team",
+      title: "Software Team",
       titleSize: "text-2xl sm:text-3xl",
       titleColor: "",
       subtitle: "",
-      description: `The programming team is responsible for the software of the robot. They write the code that makes the robot function. Using Java and tools including WPILib, they develop autonomous plans, teleoperated control systems, and integrate feedback from sensors. They collaborate closely with mechanical and electronics teams to test and refine robot behavior. Members also learn software development practices and real-world problem solving through iteration and debugging.`,
+      description: `The software team is responsible for the software of the robot. They write the code that makes the robot function. Using Java and tools including WPILib, they develop autonomous plans, teleoperated control systems, and integrate feedback from sensors. They collaborate closely with mechanical and electronics teams to test and refine robot behavior. Members also learn software development practices and real-world problem solving through iteration and debugging.`,
       imgUrl: null,
     },
     {
@@ -132,7 +142,7 @@ export default function Home() {
         imageCredit="Yeeun Ryu"
         imagePriority={true} // Assuming this is LCP for the about page
         useBlur={true}
-        overlayOpacity={0.50} // Match the previous inline style
+        overlayOpacity={0.55} // Match the previous inline style
         imageAspectRatio="3/2" // Match the previous inline style
       />
 
