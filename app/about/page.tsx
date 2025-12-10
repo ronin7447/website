@@ -1,11 +1,14 @@
 import bannerImg from "@/public/team_photo/IMG_8375_2-4.jpg";
+import bannerTmImg from "@/public/media/67A03021_crop.jpg";
 import avrImg from "@/public/team-avr.jpg";
 import { Metadata } from "next";
 import ContentLayout from "../components/ContentLayout";
 import Banner from "../components/Banner"; // Import the Banner component
 // import BotIntroCard from "../components/BotIntroCard";
-// import Image from "next/image";
-import { MapPinIcon, TrophyIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+// import { MapPinIcon, TrophyIcon } from "@heroicons/react/24/outline";
+import InfoCard1 from "@/public/infocard/card1.png";
+import InfoCard1Dark from "@/public/infocard/card1-dark.png";
 export const metadata: Metadata = {
   title: "About Rōnin Robotics - Rōnin Robotics (FRC Team 7447)",
   description: "Ronin Robotics (FRC Team 7447) is a high school robotics team from Portola High School, Irvine, CA consisting of 30+ members that participate in FIRST® Robotics Competitions along with thousands of teams and students worldwide. Our team strives to provide real-world engineering experiences through competitive robotics. Our team values a sense of community and teamwork while implementing various innovative techniques to challenge young minds. We hope to empower students with the skills they need to pursue their passion in STEM and become leaders of innovation.",
@@ -134,25 +137,48 @@ export default function Home() {
         subtitle="FIRST® Robotics Team from Portola High School, Irvine, CA since 2019."
         imageSources={{
           default: {
-            src: bannerImg,
-            blurDataURL: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAsAGQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCxOrFCVZlIHaqXlT4z5g/KrMl0okZf4cYJx3qJrkfdBTBHc0DImMynBl5+lSD7R5BbzPl9MUxkknYtlenBzjNO+0fuHj4wAAR6H60agNRpmJCyDp6VIi3AYEsuM+lJFBLGry8DHAB6mpi7Rsse5W4yST+lAFvGe1IRVdrlgCoB3noAO1BuxvHI24x05zSGWVXmnFR6VSgvThxKPmHTtnmmrfkovJ3KcucdqdhF4qPSmSqPLbjtUa3KmVmMmY+MDHSlVyyyAvuJyRx0FADYR+6FFLCP3YooAqTWrTSMsR5J5FVZ7aSCVQy8Hp71d+1xxLIxLAseMDmqU1zvKLuYqp6scmqQnYmlkicAMxGRnimWttJMpYA7c8e5pbazNw7soPlDhTVu3SaCMxsPuHHHRqBCSXSNIAH742kYOaryI24ygHCnLZ7c4/pUHmBg5K/vTJuB9KvXCeZE4ixuY5Iz15osNSsPW8GCA6hv7wFU5iXdz/eORgdabKgjCHGOAG570FxvKopIB4I6gUiny28xZkLIPLU8Dn3PrSLA4jDlTt/i+lTQtvTa4IHYHv7VLKWjhxkleh29h6UO62JVnuVI4Qz8t8uM4B/StFHEhLDj5Of8/hWciBQGlGQegNI0wRsABvlx9KYkasH+qFFVre7TyhuwD9aKQyrPGWcsNxAH8IzUdqm/zPMTK4z06Ve2+hI+hpy/KpUcA9RQIZFcyeSCFwI+OB2qNpZHUzbZDIOOvBqcLgYBIB6gd6XA6Y4pgU281WMiW4V9xBbOcH2FSyfaBGhCAZ64HWrPQY7UtAGdNFMI8hMITnA5xS2/Dl1jwBxir+B6UuB6UAUi5lKhAMdwTT2DxY8sADJzzmrO0ZzgUuBSAoTO8hXZhgOoNRSqeCIwoHXbWiEUdFA/ClwPSmBTHk88KOemaKsmNCclFP4UUAf/2Q=="
+            src: bannerTmImg,
           }
         }}
         imageAlt="Ronin Robotics Team Photo at AVR 2024"
-        imageCredit="Yeeun Ryu"
+        imageCredit="Jun Yu"
         imagePriority={true} // Assuming this is LCP for the about page
         useBlur={true}
         overlayOpacity={0.55} // Match the previous inline style
         imageAspectRatio="3/2" // Match the previous inline style
       />
 
-      <div className="max-w-screen-xl mx-auto px-6  tracking-tighter md:tracking-[-0.16rem]">
+      {/* <div className="max-w-screen-xl mx-auto px-6 tracking-tighter md:tracking-[-0.13rem]">
          <h1 className={`text-3xl sm:text-4xl font-semibold tracking-tighter sm:px-0 mb-8 sm:mb-12`}>Meet Rōnin Robotics</h1>
-        <div className="grid grid-cols-1 sm:flex">
+         <div className="max-w-screen-xl mx-auto pb-4 sm:pb-8 tracking-tighter md:tracking-[-0.12rem] mt-2">
+          <div className="w-full flex gap-2 ">
+             <div className="bg-slate-100 dark:bg-sky-950 dark:text-blue-100 text-sky-900 md:px-6 md:py-6 p-4 rounded-3xl flex items-center w-3/7">
+            <p className="text-2xl md:text-4xl font-medium leading-none ">
+              Provide real-world engineering experience across Irvine public <span className="whitespace-nowrap">high schools</span>.
+            </p>
+          </div>
+          <div className="bg-slate-100 dark:bg-purple-950 dark:text-purple-100 text-purple-900 p-6 rounded-3xl flex items-center w-1/7">
+            <div className="-mt-1">
+              <p className="text-5xl md:text-6xl lg:text-7xl font-semibold text-purple-700 dark:text-purple-200 tracking-[-0.3rem] lg:tracking-[-0.50rem] transform-[scale(1,0.94)]">65+</p>
+            <p className="text-2xl md:text-4xl font-semibold leading-none mt-1">
+              members
+            </p>
+            </div>
+          </div>
+           <div className="bg-sky-100 dark:bg-sky-950 dark:text-blue-100 text-sky-900 md:px-6 md:py-6 p-4 rounded-3xl flex items-center w-3/7">
+            <p className="text-2xl font-medium leading-none ">
+              Growing impact in the community.
+
+            </p>
+          </div>
+          </div>
+
+         </div>
+        {/* <div className="grid grid-cols-1 sm:flex">
           <div className="grid grid-cols-1 gap-2 sm:mr-2 sm:w-3/5">
           <div className="bg-sky-100 dark:bg-sky-950 dark:text-blue-100 text-sky-900 md:px-8 md:py-12 p-6 rounded-3xl flex items-center">
             <p className="text-2xl md:text-4xl font-semibold leading-none ">
-              Provide real-world engineering experience within our <span className="whitespace-nowrap">local community</span>.
+              Provide real-world engineering experience across Irvine public <span className="whitespace-nowrap">high schools</span>.
             </p>
           </div>
           <div className="bg-indigo-100 dark:text-indigo-100 dark:bg-indigo-950 text-indigo-900 md:px-8 md:py-12 p-6 rounded-3xl flex items-center">
@@ -167,7 +193,7 @@ export default function Home() {
             <div className="-mt-1">
               <p className="text-5xl md:text-6xl lg:text-7xl font-semibold text-purple-700 dark:text-purple-200 tracking-[-0.3rem] lg:tracking-[-0.50rem] transform-[scale(1,0.94)]">65+</p>
             <p className="text-2xl md:text-4xl font-semibold leading-none mt-1">
-              members from our local <span className="whitespace-nowrap">high school.</span>
+              members
             </p>
             </div>
           </div>
@@ -213,8 +239,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        </div>
-      </div>
+        </div> 
+      </div> */}
+
+      <Image src={InfoCard1} alt="Info Card" className="max-w-7xl w-full px-6 mx-auto mb-8 h-auto block dark:hidden"/>
+      <Image src={InfoCard1Dark} alt="Info Card" className="max-w-7xl w-full px-6 mx-auto mb-8 h-auto hidden dark:block"/>
+
 
       <ContentLayout content={pageContent.content} /> 
       <div className="pb-8"></div>
