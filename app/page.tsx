@@ -53,7 +53,15 @@ export default function Home() {
         imageAlt="Ronin Robotics 7447 Robot at OC Regional 2025."
         imageCredit="Jun Yu"
         useBlur={false}
-        imagePriority={true} // Make the LCP image priority
+        imagePriority={true} // Make the LCP image priority,
+        heroButton={
+          {
+            text: "Explore",
+            link: "/about",
+            color: "sky",
+            enable: true
+          }
+        }
       />
 
       <ContentLayout content={pageContent.content} />

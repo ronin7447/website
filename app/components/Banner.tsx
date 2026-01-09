@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 // Define a type for individual image sources
 type ImageSource = {
@@ -25,6 +26,12 @@ interface BannerProps {
   useBlur?: boolean; // Changed from useBlur: boolean;
   overlayOpacity?: number;
   prioritySourceKey?: string[]; // This is a bit unclear, but seems to be for determining which image to prioritize
+  heroButton?: {
+    text: string;
+    link: string;
+    color: string;
+    enable: boolean;
+  }
 }
 
 const generateBlurUrl = (src: string) => {
@@ -53,6 +60,7 @@ export default function Banner({
   useBlur = true,
   overlayOpacity = 0.40,
   prioritySourceKey = ['default'],
+  heroButton
 }: BannerProps) {
   // Determine which image source has priority (e.g., largest defined, or default)
 //   const prioritySourceKey = imageSources.xl ? 'xl' : (imageSources.lg ? 'lg' : (imageSources.md ? 'md' : 'default'));
@@ -137,9 +145,14 @@ export default function Banner({
             style={{ minHeight, backgroundColor: `rgba(0,0,0,${overlayOpacity})` }}
           >
             <div className="w-full">
-              <div className="max-w-screen-xl mx-auto px-6">
-                <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter">{title}</h1>
+              <div className={`max-w-screen-xl mx-auto px-6 ${heroButton && heroButton.enable ? "mt-12" : "mt-2"}`}>
+                <h1 className="text-4xl sm:text-5xl font-semibold tracking-tighter">{title}</h1>
                 <p className="mt-4 text-lg sm:text-xl">{subtitle}</p>
+                {heroButton && heroButton.enable && (
+                  <Link href={heroButton.link}>
+                    <button className={`mt-8 px-8 sm:px-12 py-3 text-lg sm:text-xl bg-white hover:bg-${heroButton.color}-950 hover:text-white cursor-pointer transition-all text-${heroButton.color}-950 font-bold`}>{heroButton.text}</button>
+                  </Link>
+                )}
               </div>
               {imageCredit && (
                 <div className="absolute bottom-1 right-2 select-none opacity-25 text-sm">
