@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin 'tailwind-scrollbar';
+@source inline("hover:bg-sky-950 hover:text-white cursor-pointer transition-all text-sky-950 font-bold");
 body {
   @apply bg-white text-black;
   @apply dark:bg-stone-950 dark:text-slate-50;
