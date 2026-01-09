@@ -1,21 +1,29 @@
-import CardNavigator from "../components/CardNavigator";
+// import CardNavigator from "../components/CardNavigator";
 import Link from "next/link";
-import limelightImg from "@/public/reefscape/limelight.png"
-import swerveImg from "@/public/reefscape/swerve.jpg"
-import elevatorImg from "@/public/reefscape/elevator.jpg"
-import shooterImg from "@/public/reefscape/shooter.jpg"
-import bannerImg from "@/public/robot_images/67A02062-Enhanced-NR.jpg"
-import Image from "next/image";
+// import limelightImg from "@/public/reefscape/limelight.png"
+// import swerveImg from "@/public/reefscape/swerve.jpg"
+// import elevatorImg from "@/public/reefscape/elevator.jpg"
+// import shooterImg from "@/public/reefscape/shooter.jpg"
+// import bannerImg from "@/public/robot_images/67A02062-Enhanced-NR.jpg"
+// import Image from "next/image";
 
 export default function BotIntroCard() {
     return (
         <div className="max-w-screen-xl sm:px-6 mt-16 mb-18 md:mb-18 mx-auto ui-content">
+        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 opacity-80 text-orange-600 dark:text-orange-400">&apos;26 REBUILT</h1>
+        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 ">Stay tuned for our new robot.</h1>
+        <p className="text-xl px-6 sm:px-0 mb-8">
+            Our team is excited to announce that we are currently in the process of designing and building our new robot for the 2026 FIRST® Robotics Competition season, REBUILT presented by Haas. 
+            Stay tuned for updates on our journey to create a competitive and inspiring robot for the upcoming season!
+        </p>
+        <br/>
         <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 opacity-80 text-blue-600 dark:text-blue-400">&apos;25 REEFSCAPE</h1>
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 ">Our Robot for the 2025 Season.</h1>
+        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 ">Taketsune.</h1>
         <p className="text-xl px-6 sm:px-0 mb-8">
           Learn more about our robot for the 2025 season <Link className="a-link" href="/robot/reefscape">REEFSCAPE<sup>SM</sup> presented by Haas: Taketsune</Link>.
         </p>
-        <CardNavigator />
+        
+        {/* <CardNavigator />
         <div className="flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scroll-pl sm:scroll-pl-16 h-[600px] pl-2 pr-2 sm:pl-0 sm:pr-0 ui-intro-cards">
           <div className="ui-intro-card">
               <h2 className="text-3xl font-semibold tracking-tighter">Swerve Drive</h2>
@@ -41,8 +49,8 @@ export default function BotIntroCard() {
               <h2 className="text-3xl font-semibold tracking-tighter">More highlights of <span className="whitespace-nowrap">Taketsune</span></h2>
               <Image src={bannerImg} alt="Limelight camera" className="w-full bg-gray-300 dark:bg-gray-800 h-[263px] rounded-xl mt-6 object-cover" quality={50} loading="lazy" placeholder="blur" />
               <p className="mt-6 text-lg"><Link className="a-link" href="/robot/reefscape">Learn more information and highlights about our new robot for the 2025 season.</Link></p>
-          </div>
-      </div>
+          </div> 
+      </div>*/}
      
           
     </div>
