@@ -51,6 +51,7 @@ export default function Home() {
         imageAlt="Ronin Robotics Team Robot Photo"
         imageCredit="Jun Yu"
         imagePriority={true} // This is likely the LCP
+        minHeight="70vh"
         // aspectRatio is handled internally by fill layout now
         prioritySourceKey={["lg", "default"]} // Specify which image sources to prioritize
         useBlur={true}

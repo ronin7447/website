@@ -144,6 +144,7 @@ export default function Home() {
         imageCredit="Jun Yu"
         imagePriority={true} // Assuming this is LCP for the about page
         useBlur={true}
+        minHeight={"70vh"}
         overlayOpacity={0.55} // Match the previous inline style
         imageAspectRatio="3/2" // Match the previous inline style
       />

@@ -54,6 +54,7 @@ export default function Home() {
         imageCredit="Jun Yu"
         useBlur={false}
         imagePriority={true} // Make the LCP image priority,
+        minHeight={"70vh"}
         heroButton={
           {
             text: "Explore",
