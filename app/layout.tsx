@@ -88,7 +88,7 @@ export default function RootLayout({
               </div>
 
               {/* Copyright Message  */}
-              <span className="font-semibold">&copy; 2025 Rōnin Robotics</span>
+              <span className="font-semibold">&copy; 2026 Rōnin Robotics</span>
             
             </div>
           </div>
