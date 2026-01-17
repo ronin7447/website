@@ -67,8 +67,8 @@ export default function Home() {
 
       <ContentLayout content={pageContent.content} />
       <div className="max-w-screen-xl sm:px-6 mt-8 md:mt-8 mb-12 md:mb-16 mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 text-blue-600 dark:text-blue-500">About FIRST®</h1>
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8">Where STEM meets innovation and teamwork.</h1>
+        <h1 className="text-3xl sm:text-4xl font-[550] tracking-tighter px-6 sm:px-0 text-blue-600 dark:text-blue-500">About FIRST®</h1>
+        <h1 className="text-3xl sm:text-4xl font-[550] tracking-tighter px-6 sm:px-0 mb-8">Where STEM meets innovation and teamwork.</h1>
         <div className="sm:flex items-center block">
           <div className="w-full md:w-3/5 mr-0 md:mr-12">
             <div className="block md:hidden w-full px-6 mb-8 sm:w-4/5 mx-auto max-w-md">

@@ -6,10 +6,11 @@ import Link from "next/link";
 import UmamiAnalytics from "./components/UmamiAnalytics"; // Import the new component
 
 const inter = Inter({
-  variable: "--font-inter",
   subsets: ["latin"],
+  variable: "--font-inter",
+  weight: "variable",
+  axes: ["opsz"], // key line
 });
-
 // Metadata can still be exported from client components in the app router
 export const metadata: Metadata = {
   title: "Rōnin Robotics: FRC Team 7447 (Ronin Robotics)",
@@ -44,6 +45,10 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.className} antialiased`}
+        style={{
+          fontOpticalSizing: "none",
+          fontVariationSettings: '"opsz" 32',
+        }}
       >
         <Navbar />
         {children}

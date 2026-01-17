@@ -1,6 +1,10 @@
 import Image from "next/image";
 import iusdImg from "@/public/sponsors/iusd.png";
 import ghfImg from "@/public/sponsors/ghf-dark.png";
+import fabworksImg from "@/public/sponsors/fabworks.svg";
+import simplyOrthodoniticsImg from "@/public/sponsors/simply-orthodontics.png";
+import simplyOrthodoniticsImgBlack from "@/public/sponsors/simply-orthodonitics-black.png";
+import fabworksImgDark from "@/public/sponsors/fabworks-dark.svg";
 // import portolaImg from "@/public/sponsors/portola.png";
 import Link from "next/link";
 import ContactForm from "../components/ContactForm";
@@ -23,6 +27,22 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://7447.team'),
 }
+
+const moreSponsors = [
+  {
+    name: "Fabworks",
+    url: "https://fabworks.com/",
+    imgSrc: fabworksImg,
+    darkImgSrc: fabworksImgDark
+  },
+  {
+    name: "Simply Orthodontics",
+    url: "https://www.soirvine.com/",
+    imgSrc: simplyOrthodoniticsImgBlack,
+    darkImgSrc: simplyOrthodoniticsImg
+  }
+];
+
 export default function Home() {
 
 
@@ -33,7 +53,7 @@ export default function Home() {
     <div>
 
       <div className="max-w-screen-xl sm:px-6 mt-12 mb-24 mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 ">Our Sponsors</h1>
+        <h1 className="text-3xl sm:text-4xl font-[590] tracking-tighter px-6 sm:px-0 mb-8 ">Our Sponsors</h1>
         <p className="text-lg sm:text-xl px-6 sm:px-0">
           We are incredibly grateful to our sponsors for their generous support and belief in our team.
           Your contributions help us innovate, grow, and compete at the highest level in FIRST® Robotics.
@@ -42,7 +62,7 @@ export default function Home() {
         <div className="mt-12 space-y-12 md:space-y-16">
           <div>
             <div className="max-w-screen-xl mx-auto">
-              <h1 className={`text-2xl sm:text-3xl font-semibold tracking-tighter px-6 sm:px-0 text-sky-600 dark:text-blue-300`}><Link href={"https://iusd.org/"} rel="nofollow">Irvine Unified School District</Link></h1>
+              <h1 className={`text-2xl sm:text-3xl font-[550] tracking-tighter px-6 sm:px-0 text-sky-600 dark:text-blue-300`}><Link href={"https://iusd.org/"} rel="nofollow">Irvine Unified School District</Link></h1>
               <div className="md:flex block mt-8">
                 <div className="w-full block md:hidden mb-6 px-6 ">
                   <Link href={"https://iusd.org/"} rel="nofollow"><Image src={iusdImg} alt="IUSD" className="w-full h-auto max-w-[420px] mx-auto bg-white p-2" /></Link>
@@ -63,31 +83,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-         {/* <div className="mt-12 space-y-12 md:space-y-16">
-          <div>
-            <div className="max-w-screen-xl mx-auto">
-              <h1 className={`text-2xl sm:text-3xl font-semibold tracking-tighter px-6 sm:px-0 `}>Portola High School</h1>
-              <div className="md:flex block mt-8">
-                <div className="w-full block md:hidden mb-6">
-                <Image src={iusdImg} alt="IUSD" className="w-full h-auto" />
-              </div>
-                <div className="w-full md:w-3/5 mr-0 md:mr-12">
-                  <p className="text-lg sm:text-xl px-6 sm:px-0 whitespace-pre-line">
-                    Portola High School is the home of Ronin Robotics. As a student-led team on campus, we rely on Portola’s facilities, staff oversight, and student-centered policies to meet safely, prototype after school, and host outreach events. The school’s emphasis on STEM and career-connected learning gives our members the coursework, mentorship, and space to turn ideas into working robots. We’re proud to represent the Bulldogs community at competitions and across Irvine.
-                </p>
-                </div>
-                
-              <div className="w-full md:w-2/5 md:block hidden">
-                <Image src={iusdImg} alt="IUSD" className="w-full h-auto" />
-              </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
          <div className="mt-12 space-y-12 md:space-y-16">
           <div>
             <div className="max-w-screen-xl mx-auto">
-              <h1 className={`text-2xl sm:text-3xl font-semibold tracking-tighter px-6 sm:px-0 text-red-600 dark:text-red-300`}><Link href={"https://ghaasfoundation.org/"} rel="nofollow">Gene Haas Foundation</Link></h1>
+              <h1 className={`text-2xl sm:text-3xl font-[550] tracking-tighter px-6 sm:px-0 text-red-600 dark:text-red-300`}><Link href={"https://ghaasfoundation.org/"} rel="nofollow">Gene Haas Foundation</Link></h1>
               <div className="md:flex block mt-8">
                 <div className="w-full block md:hidden mb-6 px-6">
                 <Link href={"https://ghaasfoundation.org/"} rel="nofollow"><Image src={ghfImg} alt="Gene Haas Foundation" className="w-full h-auto max-w-[220px] mx-auto" /></Link>
@@ -108,6 +107,39 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <div className="grid grid-cols-2 gap-6 mt-18 sm:px-0 px-6">
+          {moreSponsors.map((sponsor) => (
+            <Link
+              key={sponsor.name}
+              href={sponsor.url}
+              rel="nofollow"
+              className="flex items-center justify-center"
+            >
+              {sponsor.darkImgSrc ? (
+                <>
+                  <Image
+                    src={sponsor.imgSrc}
+                    alt={sponsor.name}
+                    className="w-full h-auto max-w-[260px] rounded-md dark:hidden"
+                  />
+                  <Image
+                    src={sponsor.darkImgSrc}
+                    alt={sponsor.name}
+                    className="w-full h-auto max-w-[260px] rounded-md hidden dark:block"
+                  />
+                </>
+              ) : (
+                <Image
+                  src={sponsor.imgSrc}
+                  alt={sponsor.name}
+                  className="w-full h-auto max-w-[260px] rounded-md"
+                />
+              )}
+            </Link>
+          ))}
+        </div>
+
         {/* for more sponsors  */}
         {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4 mt-12 sm:px-0 px-6">
         <div className="relative">
@@ -142,7 +174,7 @@ export default function Home() {
 
 
         <div className=" mt-24 ">
-          <div className="px-6 sm:px-0"><h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter mb-8 ">Support Rōnin Robotics</h1></div>
+          <div className="px-6 sm:px-0"><h1 className="text-3xl sm:text-4xl font-[590] tracking-tighter mb-8 ">Support Rōnin Robotics</h1></div>
           <div className="px-6 sm:px-0  block md:flex ">
             
             <div className="mb-12 md:mb-0 md:mr-12 w-full md:w-1/2">

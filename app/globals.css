@@ -7,7 +7,7 @@ body {
 }
 
 body {
-  letter-spacing: -0.8px;
+  @apply tracking-tight;
 }
 
 body .a-link {
@@ -27,6 +27,7 @@ body .a-link {
 }
 .ui-nav-inline {
   @apply inline text-lg sm:text-lg md:text-xl font-bold transition-all duration-300 ease-in-out cursor-pointer;
+  @apply tracking-tighter;
 }
 .ui-nav-inline.material-symbols-rounded {
   --font-wght: 800;

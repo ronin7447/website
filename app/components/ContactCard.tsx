@@ -6,7 +6,7 @@ export default function ContactCard() {
     <div className="max-w-screen-xl sm:px-6 mt-12 md:mt-24 mb-24 mx-auto">
       <div className="px-6 sm:px-0 block md:flex">
         <div className="w-full md:w-1/2 md:mr-12 mb-8 md:mb-0 ">
-          <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter mb-8">Contact us</h1>
+          <h1 className="text-3xl sm:text-4xl font-[550] tracking-tighter mb-8">Contact us</h1>
           <div className="flex flex-wrap gap-3 md:gap-2 mb-6">
             <Link href="mailto:first.robotics.portola@gmail.com"
               className="inline-flex items-center px-4 py-2 mb-2 bg-white dark:bg-stone-800 border border-gray-300 dark:border-gray-700 rounded-full font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-stone-700 transition-colors">

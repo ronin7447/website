@@ -146,7 +146,7 @@ export default function Banner({
           >
             <div className="w-full">
               <div className={`max-w-7xl mx-auto px-6 ${heroButton && heroButton.enable ? "mt-4" : "mt-2"}`}>
-                <h1 className="text-4xl sm:text-5xl font-semibold tracking-tighter">{title}</h1>
+                <h1 className="text-4xl sm:text-5xl font-[590] tracking-tighter">{title}</h1>
                 <p className="mt-4 text-lg sm:text-xl">{subtitle}</p>
                 {heroButton && heroButton.enable && (
                   <Link href={heroButton.link}>

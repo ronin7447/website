@@ -133,7 +133,7 @@ export default function Home() {
     <div>
       {/* Replace the old banner div with the Banner component */}
       <Banner
-        title={<>About <span className="whitespace-nowrap">Our Team</span></>}
+        title={<>About <span className="whitespace-nowrap">Rōnin Robotics</span></>}
         subtitle="FIRST® Robotics Team from Portola High School, Irvine, CA since 2019."
         imageSources={{
           default: {

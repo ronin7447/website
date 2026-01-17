@@ -20,10 +20,10 @@ export default function ContentLayout({ content }: ContentProps) {
                 <div key={index}>
                     <div className="max-w-screen-xl sm:px-6 mx-auto">
                         {(item.title && item.title != "") && (
-                        <h1 className={`${item.titleSize ? item.titleSize : "text-3xl sm:text-4xl"} font-semibold tracking-tighter px-6 sm:px-0 ${item.titleColor} ${(!item.subtitle || item.subtitle == "") ? "mb-8" : ""}`}>{item.title}</h1>
+                        <h1 className={`${item.titleSize ? item.titleSize : "text-3xl sm:text-4xl"} font-[550] tracking-tighter px-6 sm:px-0 ${item.titleColor} ${(!item.subtitle || item.subtitle == "") ? "mb-8" : ""}`}>{item.title}</h1>
                         )}
                         {(item.subtitle && item.subtitle != "") && (
-                            <h1 className={`${item.titleSize ? item.titleSize : "text-3xl sm:text-4xl"} font-semibold tracking-tighter px-6 sm:px-0 mb-8`}>{item.subtitle}</h1>
+                            <h1 className={`${item.titleSize ? item.titleSize : "text-3xl sm:text-4xl"} font-[550] tracking-tighter px-6 sm:px-0 mb-8`}>{item.subtitle}</h1>
                         )}
                         {(item.description && item.description != "") &&(
                         <p className="text-lg sm:text-xl px-6 sm:px-0 whitespace-pre-line">
