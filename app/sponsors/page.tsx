@@ -9,6 +9,7 @@ import fabworksImgDark from "@/public/sponsors/fabworks-dark.svg";
 import Link from "next/link";
 import ContactForm from "../components/ContactForm";
 import { Metadata } from "next";
+import anoChemImg from "@/public/sponsors/anochem.png";
 export const metadata: Metadata = {
   title: "Sponsors - Rōnin Robotics (FRC Team 7447)",
   description: "We are incredibly grateful to our sponsors for their generous support and belief in our team. Your contributions help us innovate, grow, and compete at the highest level in FIRST® Robotics.",
@@ -40,6 +41,11 @@ const moreSponsors = [
     url: "https://www.soirvine.com/",
     imgSrc: simplyOrthodoniticsImgBlack,
     darkImgSrc: simplyOrthodoniticsImg
+  },
+  {
+    name: "AnoChem Coatings",
+    url: "https://anochem.com/",
+    imgSrc: anoChemImg,
   }
 ];
 
@@ -89,8 +95,8 @@ export default function Home() {
               <h1 className={`text-2xl sm:text-3xl font-[550] tracking-tighter px-6 sm:px-0 text-red-600 dark:text-red-300`}><Link href={"https://ghaasfoundation.org/"} rel="nofollow">Gene Haas Foundation</Link></h1>
               <div className="md:flex block mt-8">
                 <div className="w-full block md:hidden mb-6 px-6">
-                <Link href={"https://ghaasfoundation.org/"} rel="nofollow"><Image src={ghfImg} alt="Gene Haas Foundation" className="w-full h-auto max-w-[220px] mx-auto" /></Link>
-              </div>
+                  <Link href={"https://ghaasfoundation.org/"} rel="nofollow"><Image src={ghfImg} alt="Gene Haas Foundation" className="w-full h-auto max-w-[220px] mx-auto" /></Link>
+                </div>
                 <div className="w-full md:w-3/5 mr-0 md:mr-12">
                   <p className="text-lg sm:text-xl px-6 sm:px-0 whitespace-pre-line">
                     Haas Automation is the largest machine tool builder in the United States, and one of the largest builders of CNC machines in the world.
@@ -100,7 +106,7 @@ export default function Home() {
                 </p>
                 </div>
                 
-              <div className="w-full md:w-2/5 md:block hidden">
+              <div className="w-full md:w-2/5 md:block hidden md:-mt-8">
                 <Link href={"https://ghaasfoundation.org/"} rel="nofollow"><Image src={ghfImg} alt="Gene Haas Foundation" className="w-full h-auto max-w-[220px] mx-auto" /></Link>
               </div>
               </div>
@@ -108,7 +114,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-6 mt-18 sm:px-0 px-6">
+        <div className="grid grid-cols-3 gap-6 mt-18 sm:px-0 px-6">
           {moreSponsors.map((sponsor) => (
             <Link
               key={sponsor.name}
