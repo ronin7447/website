@@ -29,14 +29,23 @@ const navitems = [
 
 
 // Define notification content (example)
+// const notification = {
+//     show: true, // Control initial visibility
+//     title: "We invite you to our 2025 team banquet!",
+//     content: "We'll hold our team banquet on May 29th, 2025, and we look forward to seeing you there! ", 
+//     link: { url: "/banquet?utm_source=promotion_banner", text: "Click here to learn more." },
+//     backgroundColor: "bg-blue-100 dark:bg-blue-900",
+//     textColor: "text-blue-800 dark:text-blue-100",
+//     ignorePath: ["/banquet"],
+// };
 const notification = {
-    show: false, // Control initial visibility
-    title: "We invite you to our 2025 team banquet!",
-    content: "We'll hold our team banquet on May 29th, 2025, and we look forward to seeing you there! ", 
-    link: { url: "/banquet?utm_source=promotion_banner", text: "Click here to learn more." },
+    show: true, // Control initial visibility
+    title: "Join Rōnin Robotics to design, build, and compete!",
+    content: "Pursue your passions in STEM, and no previous experience is needed. ", 
+    link: { url: "/join", text: "Click here for the 2026-27 interest form." },
     backgroundColor: "bg-blue-100 dark:bg-blue-900",
     textColor: "text-blue-800 dark:text-blue-100",
-    ignorePath: ["/banquet"]
+    ignorePath: ["/banquet"],
 };
 
 export default function Navbar() {
@@ -80,12 +89,12 @@ export default function Navbar() {
     const handleCloseNotification = () => {
         setShowNotification(false);
         // Optionally, save this preference to localStorage/sessionStorage
-        sessionStorage.setItem('notificationDismissed', 'true');
+        sessionStorage.setItem('notificationDismissed-' + notification.title.toLowerCase().replace(/\s+/g, '-'), 'true');
     };
 
     // Optional: Check storage on initial load
     useEffect(() => {
-      const dismissed = sessionStorage.getItem('notificationDismissed');
+      const dismissed = sessionStorage.getItem('notificationDismissed-' + notification.title.toLowerCase().replace(/\s+/g, '-'));
       if (dismissed === 'true') {
         setShowNotification(false);
       } else {
