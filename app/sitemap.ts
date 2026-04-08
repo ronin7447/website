@@ -34,6 +34,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 1,
       },
       {
+        url: baseUrl + '/robot/rebuilt',
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 1,
+      },
+      {
         url: baseUrl + '/banquet',
         lastModified: new Date(),
         changeFrequency: 'weekly',

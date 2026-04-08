@@ -13,7 +13,7 @@ const navitems = [
         url: "/"
     },
     {
-        name: "Robot",
+        name: "Robots",
         url: "/robot"
     },
     {

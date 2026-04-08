@@ -11,11 +11,13 @@ export default function BotIntroCard() {
     return (
         <div className="max-w-screen-xl sm:px-6 mt-16 mb-18 md:mb-18 mx-auto ui-content">
             <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 opacity-80 text-orange-600 dark:text-orange-400">&apos;26 REBUILT</h1>
-            <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 ">Stay tuned for our new robot.</h1>
+            <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 ">A closer look at our latest robot.</h1>
             <p className="text-xl px-6 sm:px-0 mb-8">
-                Our team is excited to announce that we are currently in the process of designing and building our new robot for the 2026 FIRST® Robotics Competition season, REBUILT presented by Haas.
-                We will participate in CA District San Gabriel Valley Event and CA District Orange County Event.
-                Stay tuned for updates on our journey to create a competitive and inspiring robot for the upcoming season!
+                Learn more about our robot for the 2026 season in{" "}
+                <Link className="a-link" href="/robot/rebuilt">
+                    REBUILT
+                </Link>
+                , including its swerve drivetrain, intake, turret, shooter, and vision systems.
             </p>
             <br />
 
@@ -23,7 +25,7 @@ export default function BotIntroCard() {
                 &apos;25 REEFSCAPE
             </h1>
             <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 ">
-                Taketsune.
+                {/* Taketsune. */}
             </h1>
             <p className="text-xl px-6 sm:px-0 mb-8">
                 Learn more about our robot for the 2025 season{" "}
@@ -39,7 +41,7 @@ export default function BotIntroCard() {
                 &apos;24 CRESCENDO
             </h1>
             <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 ">
-                Takafusa &apos;24.
+                {/* Takafusa &apos;24. */}
             </h1>
             <p className="text-xl px-6 sm:px-0 mb-8">
                 View our 2024 season on{" "}
@@ -55,7 +57,7 @@ export default function BotIntroCard() {
                 &apos;23 CHARGED UP
             </h1>
             <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 ">
-                Takafusa.
+                {/* Takafusa. */}
             </h1>
             <p className="text-xl px-6 sm:px-0 mb-8">
                 View our 2023 season on{" "}
@@ -71,7 +73,7 @@ export default function BotIntroCard() {
                 &apos;22 RAPID REACT
             </h1>
             <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 ">
-                Yoshio &apos;22.
+                {/* Yoshio &apos;22. */}
             </h1>
             <p className="text-xl px-6 sm:px-0 mb-8">
                 View our 2022 season on{" "}
@@ -88,7 +90,7 @@ export default function BotIntroCard() {
                 &apos;20 INFINITE RECHARGE
             </h1>
             <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 ">
-                Yoshio &apos;20.
+                {/* Yoshio &apos;20. */}
             </h1>
             <p className="text-xl px-6 sm:px-0 mb-8">
                 View our 2020 season on{" "}
@@ -104,7 +106,7 @@ export default function BotIntroCard() {
                 &apos;19 DESTINATION: DEEP SPACE
             </h1>
             <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 ">
-                Yoshio.
+                {/* Yoshio. */}
             </h1>
             <p className="text-xl px-6 sm:px-0 mb-8">
                 View our 2019 season on{" "}

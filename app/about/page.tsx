@@ -41,7 +41,7 @@ const pageContent = {
       title: "Our Mission",
       titleColor: "text-blue-500 dark:text-blue-400",
       subtitle: "Empowering students through STEM and hands-on innovation.",
-      description: `Formed in 2019, Rōnin Robotics is dedicated to providing real-world engineering experiences through FIRST® Robotics Competition within our local community. As a high school team, we are quickly growing to offer students the opportunity to explore STEM and robotics through hands-on learning and teamwork. Our goal is to inspire and empower the next generation of innovators with the skills and confidence to pursue their passions and become future leaders in technology.`,
+      description: `Formed in 2018, Rōnin Robotics is dedicated to providing real-world engineering experiences through FIRST® Robotics Competition within our local community. As a high school team, we are quickly growing to offer students the opportunity to explore STEM and robotics through hands-on learning and teamwork. Our goal is to inspire and empower the next generation of innovators with the skills and confidence to pursue their passions and become future leaders in technology.`,
       imgUrl: null,
     },
     {
@@ -134,7 +134,7 @@ export default function Home() {
       {/* Replace the old banner div with the Banner component */}
       <Banner
         title={<>About <span className="whitespace-nowrap">Rōnin Robotics</span></>}
-        subtitle="FIRST® Robotics Team from Portola High School, Irvine, CA since 2019."
+        subtitle="FIRST® Robotics Team from Portola High School, Irvine, CA since 2018."
         imageSources={{
           default: {
             src: bannerTmImg,
