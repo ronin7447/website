@@ -13,9 +13,9 @@ export default function BotIntroCard() {
             <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 opacity-80 text-orange-600 dark:text-orange-400">&apos;26 REBUILT</h1>
             <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8 ">A closer look at our latest robot.</h1>
             <p className="text-xl px-6 sm:px-0 mb-8">
-                Learn more about our robot for the 2026 season in{" "}
+                Learn more about our current robot for the 2026 season{" "}
                 <Link className="a-link" href="/robot/rebuilt">
-                    REBUILT
+                    REBUILT <sup>TM</sup> presented by Haas
                 </Link>
                 , including its swerve drivetrain, intake, turret, shooter, and vision systems.
             </p>

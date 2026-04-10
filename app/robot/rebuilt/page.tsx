@@ -1,198 +1,372 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 
-import limelightImg from "@/public/reefscape/limelight.png";
-import shooterImg from "@/public/reefscape/shooter.jpg";
-import swerveImg from "@/public/reefscape/swerve.jpg";
-import heroImg from "@/public/robot_images/67A02062-Enhanced-NR.jpg";
-import robotOnFieldImg from "@/public/robot_images/67A02955.jpg";
+import Banner from "@/app/components/Banner";
+import buildImg from "@/public/media/2026-season/Export sequence.00_00_59_06.Still011.jpg";
+import detailImg from "@/public/media/2026-season/Export sequence.00_00_12_17.Still004.jpg";
+import fabricationImg from "@/public/media/2026-season/Export sequence.00_00_45_18.Still009.jpg";
+import fieldHeroImg from "@/public/media/2026-season/Export sequence.00_00_36_16.Still007.jpg";
+import intakeImg from "@/public/media/2026-season/Export sequence.00_00_08_06.Still003.jpg";
+import motionImg from "@/public/media/2026-season/Export sequence.00_01_25_20.Still001.jpg";
+import robotOutdoorImg from "@/public/media/2026-season/Export sequence.00_00_01_17.Still001.jpg";
+import visionImg from "@/public/media/2026-season/Export sequence.00_00_18_01.Still005.jpg";
 
 export const metadata: Metadata = {
-    title: "Our Robot for the 2026 REBUILT Season - Rōnin Robotics",
-    description: "Learn about our robot for the 2026 REBUILT season, featuring a fast MK5N swerve drive, over-the-bumper ground intake, spindexer, 540-degree turret, adjustable-hood shooter, and PhotonVision-based field localization.",
+    title: "Our Robot for the 2026 Season - Rōnin Robotics",
+    description: "See our 2026 robot through updated build and match photography, plus a closer look at the swerve drivetrain, intake path, turreted shooter, and PhotonVision-backed localization stack.",
 };
 
-const cards = [
+type OverviewCard = {
+    title: string;
+    value: string;
+    description: string;
+    accent: string;
+};
+
+type FeatureSection = {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    description: string;
+    accent: string;
+    image: StaticImageData;
+    imageAlt: string;
+    points: {
+        title: string;
+        text: string;
+    }[];
+};
+
+type GalleryCard = {
+    title: string;
+    description: string;
+    image: StaticImageData;
+    imageAlt: string;
+};
+
+const overviewCards: OverviewCard[] = [
     {
-        title: "Swerve Drive",
-        subtitle: "Fast, Compact, and Omnidirectional.",
-        titleColor: "opacity-80 text-sky-600 dark:text-sky-400",
-        description: `Our drivetrain uses a true swerve layout, which means every wheel can be driven and steered independently. That gives the robot precise movement in any direction, from quick lateral adjustments to smooth rotation while lining up a shot or recovering in traffic.`,
-        details: `We built the system around MK5N compact swerve modules with four Kraken X60 motors handling drive and four Kraken X44 motors handling steer. With the R1 gear ratio, the drivetrain reaches a free speed of 14.9 ft/s, giving us the pace to cycle quickly without giving up fine control.`,
-        image: swerveImg,
-        imageAlt: "Close-up photo of a swerve module on the robot.",
+        title: "Drivetrain",
+        value: "14.9 ft/s",
+        description: "MK5N compact swerve modules with Kraken X60 drive and Kraken X44 steer motors keep the robot fast and precise.",
+        accent: "text-sky-600 dark:text-sky-400",
     },
     {
-        title: "Ground Intake",
-        subtitle: "Collect FUELS Straight from the Carpet.",
-        titleColor: "opacity-80 text-orange-600 dark:text-orange-400",
-        description: `An over-the-bumper ground intake lets us pick up FUELS efficiently without needing a perfect approach angle. That shortens cycle times, helps us recover loose game pieces, and gives drivers more freedom to stay aggressive around the field.`,
-        details: `The intake is designed to hand pieces off cleanly into the rest of the scoring path, so we can move from collection to indexing without unnecessary delay or unstable transfers.`,
-        image: shooterImg,
-        imageAlt: "Close-up photo of the robot intake and roller assembly.",
+        title: "Aiming Range",
+        value: "540 deg",
+        description: "The turret can keep scoring angles open without forcing the chassis to square up to every shot.",
+        accent: "text-violet-600 dark:text-violet-400",
     },
     {
-        title: "Spindexer",
-        subtitle: "A Controlled Feed into the Shooter.",
-        titleColor: "opacity-80 text-blue-600 dark:text-blue-400",
-        description: `To keep the scoring path consistent, we use a spinning indexer that settles and stages incoming FUELS before they reach the shooter. That extra control helps reduce jams and keeps the handoff predictable even when we are cycling at speed.`,
-        details: `By presenting each game piece in a more repeatable position, the spindexer improves shot consistency and gives the shooter a steadier input instead of relying on whatever orientation the intake happens to deliver.`,
-        image: heroImg,
-        imageAlt: "Photo of the robot showing its upper scoring structure.",
-    },
-    {
-        title: "Turret",
-        subtitle: "Rotation for Auto-Aim and Passing.",
-        titleColor: "opacity-80 text-violet-600 dark:text-violet-400",
-        description: `A turret with 540 degrees of rotation gives the robot freedom to aim without forcing the drivetrain to face one direction. That makes it easier to track the HUB, keep the chassis mobile, and maintain better scoring angles under pressure.`,
-        details: `The extra rotation range also supports passes back from the NEUTRAL ZONE or ALLIANCE ZONE, giving drivers a flexible option when a direct scoring attempt is not the best play.`,
-        image: robotOnFieldImg,
-        imageAlt: "Photo of the robot competing on the field.",
-    },
-    {
-        title: "Shooter",
-        subtitle: "Physics-Tuned for Repeatable Shots.",
-        titleColor: "opacity-80 text-indigo-600 dark:text-indigo-400",
-        description: `Our shooter pairs an adjustable hood with a tuned flywheel system so we can adapt to different shot locations instead of building around a single release point. The goal is to make scoring repeatable from a wider range of positions.`,
-        details: `The hood adjusts from 60 to 90 degrees, and our software uses physics-based calculations to determine both hood angle and flywheel velocity. That tuning lets us approach each shot with a measured setup rather than rough presets.`,
-        image: shooterImg,
-        imageAlt: "Close-up photo of the robot shooter rollers and hood assembly.",
-    },
-    {
-        title: "PhotonVision",
-        subtitle: "Vision Support for Faster Alignment.",
-        titleColor: "opacity-80 text-green-600 dark:text-green-400",
-        description: `PhotonVision provides the robot with the target information needed for automatic aiming assistance. By turning camera data into usable measurements, it helps reduce the amount of manual alignment required during fast scoring cycles.`,
-        details: `That vision feedback can be blended with driver control so the robot stays responsive while still benefiting from automatic corrections when lining up to shoot or pass.`,
-        image: limelightImg,
-        imageAlt: "Promotional image of a Limelight vision camera used for robot vision.",
-    },
-    {
-        title: "Field Localization",
-        subtitle: "Know Where We Are, Not Just What We See.",
-        titleColor: "opacity-80 text-emerald-600 dark:text-emerald-400",
-        description: `Beyond target detection, our vision stack helps estimate the robot's position on the field. That broader awareness makes it easier to line up repeatable shots, return to key scoring locations, and give autonomous routines better context.`,
-        details: `Using PhotonVision-based measurements alongside drivetrain data, we can maintain a more stable pose estimate and hand more trustworthy localization information to the rest of the robot software.`,
-        image: robotOnFieldImg,
-        imageAlt: "Photo of the robot positioned on the competition field.",
+        title: "Shot Control",
+        value: "60-90 deg",
+        description: "An adjustable hood and physics-based shot tuning help keep release conditions deliberate and repeatable.",
+        accent: "text-indigo-600 dark:text-indigo-400",
     },
 ];
+
+const featureSections: FeatureSection[] = [
+    {
+        eyebrow: "01",
+        title: "Move first, collect quickly.",
+        subtitle: "Swerve drive and an over-the-bumper intake keep cycles short.",
+        description:
+            "Our 2026 robot starts with mobility. The drivetrain is designed to strafe, rotate, and recover cleanly, while the intake is built to pull FUELS straight off the carpet without demanding a perfect approach angle from the drivers.",
+        accent: "text-sky-600 dark:text-sky-400",
+        image: robotOutdoorImg,
+        imageAlt: "Our 2026 robot parked outdoors during a 2026-season photo session.",
+        points: [
+            {
+                title: "Swerve drive",
+                text: "Each wheel can drive and steer independently, so the robot can translate and rotate at the same time when lining up, dodging traffic, or resetting for the next pickup.",
+            },
+            {
+                title: "Ground intake",
+                text: "The intake hands pieces off directly into the scoring path, cutting down the time between acquisition and the next controlled feed.",
+            },
+        ],
+    },
+    {
+        eyebrow: "02",
+        title: "Stage pieces, then score from better angles.",
+        subtitle: "The feed path is tuned around controlled handoff, rotation, and shot setup.",
+        description:
+            "A spinning indexer settles game pieces before they reach the shooter, which gives the rest of the robot a steadier starting point. From there, the turret and adjustable hood let the software choose better release geometry instead of forcing every shot to come from the same pose.",
+        accent: "text-orange-600 dark:text-orange-400",
+        image: detailImg,
+        imageAlt: "Top-down view of our 2026 robot showing its turret and staged game pieces.",
+        points: [
+            {
+                title: "Spindexer",
+                text: "The indexer keeps incoming pieces more predictable, reducing messy transfers and making the shooter input more consistent when the robot is cycling at speed.",
+            },
+            {
+                title: "Turreted shooter",
+                text: "With 540 degrees of turret rotation and a hood that adjusts from 60 to 90 degrees, the robot can aim more flexibly while the drivetrain keeps moving.",
+            },
+        ],
+    },
+    {
+        eyebrow: "03",
+        title: "Use vision to tighten the whole loop.",
+        subtitle: "PhotonVision supports both aiming help and broader field awareness.",
+        description:
+            "Vision is not just for spotting targets. PhotonVision gives the robot measurements that can support auto-aim behavior and also help stabilize the robot's field pose when combined with drivetrain data.",
+        accent: "text-green-600 dark:text-green-400",
+        image: visionImg,
+        imageAlt: "Our 2026 robot competing on the field during a match with yellow game pieces in flight.",
+        points: [
+            {
+                title: "PhotonVision targeting",
+                text: "Camera measurements reduce the amount of manual alignment needed during fast scoring cycles while still leaving the drivers in control.",
+            },
+            {
+                title: "Field localization",
+                text: "A steadier pose estimate makes it easier to revisit known shooting spots and gives autonomous or assistive routines more trustworthy context.",
+            },
+        ],
+    },
+];
+
+const galleryCards: GalleryCard[] = [
+    {
+        title: "Subsystem detail",
+        description: "A tighter look at the intake path, storage volume, and upper structure.",
+        image: intakeImg,
+        imageAlt: "Close-up of the robot packed with yellow game pieces during the 2026 season.",
+    },
+    {
+        title: "Fabrication",
+        description: "Machining and assembly work that turned the concept into a competition-ready structure.",
+        image: fabricationImg,
+        imageAlt: "A team member drilling into a robot panel during fabrication.",
+    },
+    {
+        title: "Build season",
+        description: "Turret and upper-assembly work in progress during the 2026 build season.",
+        image: buildImg,
+        imageAlt: "A student working on the upper portion of our 2026 robot.",
+    },
+    {
+        title: "Drive testing",
+        description: "Outdoor reps to validate motion, packaging, and how the robot behaves at speed.",
+        image: motionImg,
+        imageAlt: "Our 2026 robot driving outdoors during testing.",
+    },
+];
+
+function SectionHeading({
+    eyebrow,
+    title,
+    accentClass = "text-orange-600 dark:text-orange-400",
+}: {
+    eyebrow: string;
+    title: string;
+    accentClass?: string;
+}) {
+    return (
+        <>
+            <h1
+                className={`text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 opacity-80 ${accentClass}`}
+            >
+                {eyebrow}
+            </h1>
+            <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8">
+                {title}
+            </h1>
+        </>
+    );
+}
 
 export default function RebuiltPage() {
     return (
         <div>
-            <div className="max-w-[120rem] mx-auto mb-10 md:mb-16">
-                <div className="mx-auto min-w-full">
-                    <div
-                        className="relative mx-auto overflow-hidden bg-gray-400 text-white min-h-[60vh] h-full max-h-screen"
-                        style={{ aspectRatio: "4/1", maxWidth: "100%" }}
-                    >
-                        <Image
-                            src={heroImg}
-                            alt="Rōnin Robotics robot competing during a match."
-                            fill
-                            priority
-                            quality={75}
-                            sizes="100vw"
-                            className="object-cover"
+            <Banner
+                title={
+                    <>
+                        Take a closer look at{" "}
+                        <span className="whitespace-nowrap">our 2026 robot</span>
+                    </>
+                }
+                subtitle="A refreshed look at our 2026 robot, built around fast collection, staged feeding, flexible aiming, and PhotonVision-backed localization."
+                imageSources={{
+                    default: {
+                        src: fieldHeroImg,
+                    },
+                }}
+                imageAlt="Our 2026 robot competing on the field during the 2026 season."
+                imagePriority
+                minHeight="68vh"
+                overlayOpacity={0.42}
+                useBlur={false}
+            />
+
+            <section className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
+                <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr] px-6 sm:px-0">
+                    <div>
+                        <SectionHeading
+                            eyebrow="'26 REBUILT"
+                            title="Fast cycles, controlled feeds, repeatable shots."
                         />
-                        <div className="relative z-10 flex w-full min-h-[60vh] h-full max-h-screen items-center justify-start bg-[rgba(0,0,0,0.40)]">
-                            <div className="w-full">
-                                <div className="max-w-screen-xl mx-auto px-6">
-                                    <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter">Take a closer look at our REBUILT robot</h1>
-                                    <p className="mt-4 text-lg sm:text-xl">Learn more about our robot for the 2026 REBUILT season, from the drivetrain and intake to the shooter, turret, and vision stack.</p>
-                                </div>
-                                <div className="absolute bottom-1 right-2 select-none text-sm opacity-25">
-                                    <p>&copy; Jun Yu</p>
+                        <p className="text-xl text-stone-700 dark:text-stone-300 px-6 sm:px-0">
+                            Our 2026 robot is centered on shortening the
+                            path from pickup to score. The chassis is tuned to
+                            move aggressively, the feed path is designed to keep
+                            pieces settled before release, and the aiming stack
+                            is built so drivers and software can share the work
+                            of making each shot cleaner.
+                        </p>
+                        <p className="mt-6 text-xl text-stone-700 dark:text-stone-300 px-6 sm:px-0">
+                            The rebuild process followed the same priorities as
+                            the final robot: keep the architecture clear,
+                            validate subsystems early, and turn that iteration
+                            into a machine that could move quickly without
+                            giving up control.
+                        </p>
+                    </div>
+
+                    <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+                        {overviewCards.map((card) => (
+                            <div
+                                key={card.title}
+                                className="rounded-lg border border-stone-200/80 bg-stone-50 p-5 dark:border-stone-800 dark:bg-stone-900/70"
+                            >
+                                <p
+                                    className={`text-sm font-semibold uppercase tracking-[0.22em] ${card.accent}`}
+                                >
+                                    {card.title}
+                                </p>
+                                <p className="mt-3 text-3xl font-[590] tracking-tighter">
+                                    {card.value}
+                                </p>
+                                <p className="mt-3 text-base text-stone-700 dark:text-stone-300">
+                                    {card.description}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {featureSections.map((section, index) => {
+                const imageOrderClass = index % 2 === 1 ? "lg:order-2" : "";
+                const textOrderClass = index % 2 === 1 ? "lg:order-1" : "";
+
+                return (
+                    <section
+                        key={section.title}
+                        className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto"
+                    >
+                        <div className="grid gap-6 lg:grid-cols-[1fr_1fr] px-6 sm:px-0">
+                            <div
+                                className={`overflow-hidden rounded-lg bg-stone-100 dark:bg-stone-900 ${imageOrderClass}`}
+                            >
+                                <Image
+                                    src={section.image}
+                                    alt={section.imageAlt}
+                                    className="h-[320px] w-full object-cover sm:h-[420px] lg:h-full"
+                                    quality={80}
+                                />
+                            </div>
+
+                            <div
+                                className={`rounded-lg border border-stone-200/80 bg-white p-6 sm:p-8 dark:border-stone-800 dark:bg-stone-950 ${textOrderClass}`}
+                            >
+                                <p
+                                    className={`text-sm font-semibold uppercase tracking-[0.22em] ${section.accent}`}
+                                >
+                                    {section.eyebrow}
+                                </p>
+                                <h2 className="mt-3 text-3xl sm:text-4xl font-[590] tracking-tighter">
+                                    {section.title}
+                                </h2>
+                                <p className="mt-3 text-lg sm:text-xl text-stone-700 dark:text-stone-300">
+                                    {section.subtitle}
+                                </p>
+                                <p className="mt-6 text-lg text-stone-700 dark:text-stone-300">
+                                    {section.description}
+                                </p>
+
+                                <div className="mt-8 grid gap-4">
+                                    {section.points.map((point) => (
+                                        <div
+                                            key={point.title}
+                                            className="rounded-lg bg-stone-50 p-5 dark:bg-stone-900/70"
+                                        >
+                                            <h3 className="text-xl font-[550] tracking-tighter">
+                                                {point.title}
+                                            </h3>
+                                            <p className="mt-2 text-base text-stone-700 dark:text-stone-300">
+                                                {point.text}
+                                            </p>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </section>
+                );
+            })}
 
-            {cards.map((card, index) => (
-                <div key={card.title} className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
-                    <h1 className={`text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 ${card.titleColor}`}>{card.title}</h1>
-                    <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8">{card.subtitle}</h1>
+            <section className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
+                <SectionHeading
+                    eyebrow="Process"
+                    title="From workshop to field."
+                    accentClass="text-sky-600 dark:text-sky-400"
+                />
 
-                    {index === 0 ? (
-                        <>
-                            <p className="text-xl px-6 sm:px-0">{card.description}</p>
+                <div className="grid gap-6 px-6 sm:px-0 md:grid-cols-2">
+                    {galleryCards.map((card) => (
+                        <div
+                            key={card.title}
+                            className="overflow-hidden rounded-lg border border-stone-200/80 bg-white dark:border-stone-800 dark:bg-stone-950"
+                        >
                             <Image
                                 src={card.image}
                                 alt={card.imageAlt}
-                                className="bg-gray-300 dark:bg-gray-800 h-[50vh] sm:h-[70vh] sm:rounded-3xl mt-6 object-cover"
-                                quality={50}
+                                className="h-[280px] w-full object-cover"
+                                quality={80}
                             />
-                            <p className="mt-6 text-xl px-6 sm:px-0">{card.details}</p>
-                        </>
-                    ) : (
-                        <>
-                            <div className="hidden sm:flex">
-                                <div className="w-1/2">
-                                    <p className="text-xl px-6 sm:px-0">
-                                        {card.description}
-                                        <br />
-                                        <br />
-                                        {card.details}
-                                    </p>
-                                </div>
-                                <Image
-                                    src={card.image}
-                                    alt={card.imageAlt}
-                                    className="bg-gray-300 dark:bg-gray-800 h-[50vh] sm:rounded-3xl ml-8 object-cover w-1/2"
-                                    quality={50}
-                                />
+                            <div className="p-6">
+                                <h2 className="text-2xl sm:text-3xl font-[550] tracking-tighter">
+                                    {card.title}
+                                </h2>
+                                <p className="mt-3 text-lg text-stone-700 dark:text-stone-300">
+                                    {card.description}
+                                </p>
                             </div>
-
-                            <div className="block sm:hidden">
-                                <p className="text-xl px-6 sm:px-0">{card.description}</p>
-                                <Image
-                                    src={card.image}
-                                    alt={card.imageAlt}
-                                    className="bg-gray-300 dark:bg-gray-800 h-[50vh] sm:h-[70vh] sm:rounded-3xl mt-6 object-cover"
-                                    quality={50}
-                                />
-                                <p className="mt-6 text-xl px-6 sm:px-0">{card.details}</p>
-                            </div>
-                        </>
-                    )}
+                        </div>
+                    ))}
                 </div>
-            ))}
+            </section>
 
-            <div className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
-                <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 opacity-80 text-orange-600 dark:text-orange-400">&apos;26 REBUILT</h1>
-                <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8">Built for fast cycles and controlled shots.</h1>
-
-                <p className="text-xl px-6 sm:px-0">
-                    Our 2026 robot is built around efficient collection, stable indexing, flexible aiming, and reliable scoring. With a fast swerve drivetrain, over-the-bumper intake, 540-degree turret, adjustable-hood shooter, and a PhotonVision-backed localization stack, the design is focused on moving quickly while keeping every shot setup deliberate and repeatable.
-                </p>
-
-                <Image
-                    src={robotOnFieldImg}
-                    alt="Rōnin Robotics robot during a competition match."
-                    className="bg-gray-300 dark:bg-gray-800 h-[98vh] sm:rounded-3xl mt-6 object-cover"
-                    quality={85}
+            <section className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
+                <SectionHeading
+                    eyebrow="Resources"
+                    title="Follow the rest of the season."
+                    accentClass="text-purple-700 dark:text-purple-400"
                 />
-                <p className="mt-6 text-xl px-6 sm:px-0">
-                    Each subsystem was chosen to support the same idea: shorten the path from pickup to score while giving drivers and software enough information to stay accurate under match pressure.
-                </p>
-            </div>
-
-            <div className="max-w-screen-xl sm:px-6 mb-10 md:mb-20 mx-auto">
-                <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 opacity-80 text-purple-700">Resources</h1>
-                <h1 className="text-3xl sm:text-4xl font-semibold tracking-tighter px-6 sm:px-0 mb-8">Follow the rest of the season.</h1>
 
                 <p className="text-xl px-6 sm:px-0 ui-content">
-                    Explore more robots from our team on <Link href="/robot" className="a-link">The Robots We Built</Link>.
+                    Explore more robots from our team on{" "}
+                    <Link href="/robot" className="a-link">
+                        The Robots We Built
+                    </Link>
+                    .
                     <br />
                     <br />
-                    Follow our Instagram (<Link href="https://www.instagram.com/frc7447/" className="a-link">@frc7447</Link>) for more updates on our robot and the 2026 season.
+                    Follow our Instagram (
+                    <Link
+                        href="https://www.instagram.com/frc7447/"
+                        className="a-link"
+                    >
+                        @frc7447
+                    </Link>
+                    ) for more updates on our robot and the 2026 season.
                 </p>
-                <div className="mb-48"></div>
-            </div>
+                <div className="mb-48" />
+            </section>
         </div>
     );
 }

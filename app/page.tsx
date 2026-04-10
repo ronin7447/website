@@ -1,5 +1,6 @@
 import Image from "next/image";
-import bannerImgVertical from "@/public/robot_images/67A02062-Enhanced-NR.jpg"
+// import bannerImgVertical from "@/public/robot_images/67A02062-Enhanced-NR.jpg"
+import bannerImgVertical from "@/public/robot_images/67A05909.jpg";
 // import bannerImg from "@/public/banner/67A02981_sm.jpg"
 // import bannerImgLG from "@/public/robot_images/67A02062-Enhanced-NR_LG.jpg"
 // import bannerImgXL from "@/public/robot_images/67A02062-Enhanced-NR_XL.jpg"
@@ -8,7 +9,7 @@ import firstDarkLogo from "@/public/sponsors/first-dark.png"
 import ContactCard from "./components/ContactCard";
 import ContentLayout from "./components/ContentLayout";
 import Banner from "./components/Banner"; // Import the new Banner component
-import bannerImgMD from "@/public/banner/67A02981_lg.jpg"
+import bannerImgMD from "@/public/robot_images/67A05919.jpg"
 import mediaTeamImg from "@/public/media/67A03021.jpg"
 const pageContent = {
   content: [
