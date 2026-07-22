@@ -40,7 +40,7 @@ export default function Home() {
       {/* Replace the old banner section with the Banner component */}
       <Banner
         title={<>Rōnin Robotics <span className="whitespace-nowrap">Team 7447</span></>}
-        subtitle="High School FIRST® Robotics Competition Team, from Portola High School, Irvine, CA since 2018."
+        subtitle="Empowering Irvine students through student-led, real-world engineering in FIRST® Robotics Competition since 2018."
         imageSources={{
           default: {
             src: bannerImgVertical,

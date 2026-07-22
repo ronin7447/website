@@ -7,6 +7,12 @@ type ImageSource = {
   blurDataURL?: string;
 };
 
+type HeroAction = {
+  text: string;
+  link: string;
+  enable: boolean;
+};
+
 interface BannerProps {
   title: React.ReactNode;
   subtitle: string;
@@ -26,12 +32,10 @@ interface BannerProps {
   useBlur?: boolean; // Changed from useBlur: boolean;
   overlayOpacity?: number;
   prioritySourceKey?: string[]; // This is a bit unclear, but seems to be for determining which image to prioritize
-  heroButton?: {
-    text: string;
-    link: string;
+  heroButton?: HeroAction & {
     color: string;
-    enable: boolean;
-  }
+  };
+  heroSubButton?: HeroAction;
 }
 
 const generateBlurUrl = (src: string) => {
@@ -60,10 +64,13 @@ export default function Banner({
   useBlur = true,
   overlayOpacity = 0.40,
   prioritySourceKey = ['default'],
-  heroButton
+  heroButton,
+  heroSubButton
 }: BannerProps) {
   // Determine which image source has priority (e.g., largest defined, or default)
 //   const prioritySourceKey = imageSources.xl ? 'xl' : (imageSources.lg ? 'lg' : (imageSources.md ? 'md' : 'default'));
+
+  const hasHeroActions = Boolean(heroButton?.enable || heroSubButton?.enable);
 
   return (
     <div className="max-w-[120rem] mx-auto mb-10 md:mb-16">
@@ -145,13 +152,22 @@ export default function Banner({
             style={{ minHeight, backgroundColor: `rgba(0,0,0,${overlayOpacity})` }}
           >
             <div className="w-full">
-              <div className={`max-w-7xl mx-auto px-6 ${heroButton && heroButton.enable ? "mt-4" : "mt-2"}`}>
+              <div className={`max-w-7xl mx-auto px-6 ${hasHeroActions ? "mt-4" : "mt-2"}`}>
                 <h1 className="text-4xl sm:text-5xl font-[590] tracking-tighter">{title}</h1>
                 <p className="mt-4 text-lg sm:text-xl">{subtitle}</p>
-                {heroButton && heroButton.enable && (
-                  <Link href={heroButton.link}>
-                    <button className={`mt-8 px-8 sm:px-12 py-3 text-lg sm:text-xl bg-white hover:bg-${heroButton.color}-950 hover:text-white cursor-pointer transition-all text-${heroButton.color}-950 font-bold`} data-umami-event="hero-button-clicked" data-umami-event-text={heroButton.text} data-umami-event-link={heroButton.link}>{heroButton.text}</button>
-                  </Link>
+                {hasHeroActions && (
+                  <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row">
+                    {heroButton?.enable && (
+                      <Link href={heroButton.link}>
+                        <button className={`px-8 sm:px-8 py-3 text-lg sm:text-xl bg-white tracking-tighter hover:bg-${heroButton.color}-950 hover:text-white cursor-pointer transition-all text-${heroButton.color}-950 font-bold`} data-umami-event="hero-button-clicked" data-umami-event-text={heroButton.text} data-umami-event-link={heroButton.link}>{heroButton.text}</button>
+                      </Link>
+                    )}
+                    {heroSubButton?.enable && (
+                      <Link href={heroSubButton.link}>
+                        <button className="border border-white bg-transparent px-8 py-3 text-lg font-bold tracking-tighter text-white transition-all hover:bg-white hover:text-stone-950 sm:px-8 sm:text-xl" data-umami-event="hero-sub-button-clicked" data-umami-event-text={heroSubButton.text} data-umami-event-link={heroSubButton.link}>{heroSubButton.text}</button>
+                      </Link>
+                    )}
+                  </div>
                 )}
               </div>
               {imageCredit && (

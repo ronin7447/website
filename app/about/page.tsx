@@ -134,7 +134,7 @@ export default function Home() {
       {/* Replace the old banner div with the Banner component */}
       <Banner
         title={<>About <span className="whitespace-nowrap">Rōnin Robotics</span></>}
-        subtitle="FIRST® Robotics Team from Portola High School, Irvine, CA since 2018."
+        subtitle="Since 2018, Rōnin Robotics has empowered high school students in Irvine to lead, build, and solve real-world engineering challenges through the FIRST® Robotics Competition."
         imageSources={{
           default: {
             src: bannerTmImg,
