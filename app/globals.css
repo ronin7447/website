@@ -16,17 +16,17 @@ body .a-link {
 
 
 .ui-nav-title {
-  @apply cursor-default select-none md:text-4xl text-3xl font-bold;
-  letter-spacing: -2.5px;
+  @apply cursor-default select-none md:text-4xl text-4xl font-[660];
+  @apply tracking-[-0.07em];
   transform: scale(1,0.94);
 }
 .ui-footer-title {
-  @apply cursor-default select-none text-2xl sm:text-3xl md:text-4xl font-bold;
-  letter-spacing: -2.5px;
+  @apply cursor-default select-none text-2xl sm:text-3xl md:text-4xl font-[660];
+  @apply tracking-[-0.07em];
   transform: scale(1,0.94);
 }
 .ui-nav-inline {
-  @apply inline text-lg sm:text-lg md:text-xl font-bold transition-all duration-300 ease-in-out cursor-pointer;
+  @apply inline text-lg sm:text-lg md:text-xl font-[660] transition-all duration-300 ease-in-out cursor-pointer;
   @apply tracking-tighter;
 }
 .ui-nav-inline.material-symbols-rounded {
