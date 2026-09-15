@@ -11,6 +11,8 @@ const shortLinks: Readonly<Record<string, string>> = {
         "https://docs.google.com/forms/d/e/1FAIpQLSehcnUWC1tCz6PSSeqpT3Eev9fnxytomBltgOTeBkAa-azCdg/viewform?usp=dialog",
     signin26:
         "https://docs.google.com/forms/d/e/1FAIpQLSfHJdfjzsDlUjAR81whK885AHRdo1ViCYNChNBCdpKoGSUVgA/viewform?usp=sharing&ouid=109424922547981011055",
+    signin27:
+    "https://docs.google.com/forms/d/1PqipR9Xw3ZvoO_sQMOlvOeOXYw5mxxFDZiesY_tdH5s/viewform",
     merch: "https://docs.google.com/forms/d/e/1FAIpQLSd_ukbMF7mj8eGRADFuwVkJVwK1R3q_x2jCkVSoOxdmdW6khA/viewform?usp=dialog",
 };
 

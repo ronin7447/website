@@ -133,14 +133,14 @@ export default function WorkshopsPage() {
                 minHeight="64vh"
                 overlayOpacity={0.42}
                 heroButton={{
-                    text: "Join summer sessions",
-                    link: "/summercode",
+                    text: "View schedules",
+                    link: "/joinworkshop",
                     color: "sky",
                     enable: true,
                 }}
                 // heroSubButton={{
-                //     text: "Summer programming",
-                //     link: "/summercode",
+                //     text: "Join Rōnin",
+                //     link: "/join",
                 //     enable: true,
                 // }}
             />
