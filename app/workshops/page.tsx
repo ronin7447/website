@@ -42,8 +42,8 @@ const impactStats = [
         label: "Student-led engineering education",
     },
     {
-        value: "90+",
-        label: "Instructional sessions during 2025-26",
+        value: "100+",
+        label: "Instructional sessions since 2025",
     },
     {
         value: "55+",
@@ -121,7 +121,7 @@ export default function WorkshopsPage() {
     return (
         <main className="overflow-hidden bg-white text-stone-950 tracking-normal dark:bg-stone-950 dark:text-white">
             <Banner
-                title="Rōnin Engineering Workshops"
+                title="PRIDE Engineering Workshop Program"
                 subtitle="Making engineering accessible to everyone in our community."
                 imageSources={{
                     default: {
